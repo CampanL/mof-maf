@@ -1,0 +1,278 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+header{
+	background-color: #ddd;
+	padding-bottom: 2%;
+}
+
+h2{
+	margin: 5% 0%;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #34315c;	
+	text-transform: uppercase;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	display: inline-block;
+}
+
+img{
+	max-width: 100%;
+}
+
+.logo{
+	width: 90px;
+}
+
+.login_space{
+	text-transform: uppercase;
+	font-size: 0.7em;
+}
+
+.login_space ul{
+	background-color: white;
+	display: inline-block;
+	padding: 10px 20px;
+	box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.login_space .border-left{
+	border-left: 1px solid grey;
+	padding: 0;
+	height: 15px;
+	margin: 0px 15px;
+}
+
+nav{
+	margin-top: 15px;
+}
+
+nav li{
+	padding: 5px 15px;
+	text-transform: uppercase;
+}
+
+nav li:hover{
+	background-color: red;
+}
+
+.container-image, .container-image img{
+	width: 100%;
+}
+
+.container-image img{
+	height: 780px;
+}
+
+.absolute-container{
+	width: 66.5vw;
+	position: absolute;
+	top: 140vh;
+	left: 14vw;
+	z-index: 3;
+	text-transform: uppercase;
+}
+
+.absolute-container div.row{
+	margin-bottom: 15px;
+}
+
+.absolute-container .actu{
+	color: #34315c;
+	font-weight: bold;
+	background-color: white;
+	margin-top: -15%;
+	padding: 1% 4%;
+}
+
+.tentez_lexperience .text,.tentez_lexperience .inscription{
+	padding: 25px 40px;
+}
+
+.tentez_lexperience .text{
+ 	text-align: center;
+ 	color: #34315c;
+ 	background-color: white;
+}
+
+.tentez_lexperience .text h3{
+ 	font-size: 2.5em;
+}
+
+
+.tentez_lexperience .inscription{
+ 	background-color: #b91200;
+ 	 color: white;
+}
+
+.tentez_lexperience .inscription h4{
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.tentez_lexperience .inscription .trait{
+	background-color: white;
+}
+
+.tentez_lexperience p{
+	font-size: 1.3em;
+}
+
+.tentez_lexperience .description{
+	font-size: 0.7em;
+}
+
+.description-news{
+	position: relative;
+	top: -100px;
+	left: 155px;
+	background-color: white;
+	padding: 5%;
+	color: #34315c;
+}
+
+.description-news .trait{
+	background-color: #34315c;
+}
+
+.description-news h3{
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.description-news p{
+	font-size: 0.8em;
+	text-transform: none;
+	text-align: left;
+}
+
+.description-news span{
+	color: rgba(155,155,155,0.8);
+}
+
+.description-news a.btn{
+	color: white;
+	font-weight: bold;
+	width: 80%;
+	margin-left: 10%;
+	background-color: #34315c;
+}
+
+.second-bg{
+	background-color: #ddd;
+	height: 115vh;
+	width: 100%;
+}
+
+.pourquoi-participer{
+	background-image: url("../images/maxresdefault.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.pourquoi-participer h2{
+	color: white;
+}
+
+.pourquoi-participer .filtre{
+	background-color: rgba(63,56,90,0.7);
+}
+
+.pourquoi-participer a.btn{
+	color: #34315c;
+	font-weight: bold;
+	background-color: white;
+	padding: 0.5% 5%;
+	text-transform: uppercase;
+	margin: 3% 0;
+}
+.btn-style{
+	background-color: white;
+	color: #b81202;
+	width: 100%;
+}
+
+.rechercher{
+	background-color: #ddd;
+	padding: 3% 0;
+}
+
+.rechercher form{
+	margin: 1% 0;
+}
+
+.rechercher form>*{
+	display: inline-block;
+	margin-right: 3%;
+}
+
+.trait{
+	width: 20px;
+	height: 2px;
+	margin-bottom: 10px;
+}
+
+.rechercher {
+	color: #34315c;
+}
+
+.rechercher h3{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.en-images{
+	background-color: #ddd;
+}
+
+.en-images .btn{
+	text-transform: uppercase;
+	color:#34315c;
+	border: 1px solid #34315c;
+	padding: 1% 2%;
+	margin: 2% 0 4% 0;
+	background-color: white;
+}
+
+.partenaire h3{
+	text-transform: uppercase;
+	color: #34315c;
+	margin: 2% 5%;
+	font-weight: bold;
+}
+
+footer{
+	background-color: #34315c;
+	color: white;
+	padding-top: 1%
+}
+
+a.btn{
+	border-radius: 0;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.m10bpc{
+	margin-bottom: 10%;
+}
+.ls31{
+	letter-spacing: -0.31em;
+}

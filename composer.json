@@ -1,0 +1,25 @@
+{
+    "name": "clement/maf",
+    "description": "Projet de refonte du site du SnMOF dans le cadre du Lab201 de l'Ecole Multimedia",
+    "require": {
+        "silex/silex": "^2.0",
+        "stfalcon/tinymce-bundle": "^2.1",
+        "twig/twig": "^2.2",
+        "symfony/validator": "^3.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clement Teboul",
+            "email": "teboul.clement@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            ""
+        ],
+        "psr-4": {
+            "": ""
+        }
+    }
+}

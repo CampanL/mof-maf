@@ -1,0 +1,194 @@
+{% extends 'layouts/master.twig' %}
+
+{% block content %}
+	<div class="container-image">
+		<img src="assets/images/maxresdefault.jpg" alt="un ouvrier a la tache">
+	</div>
+
+	<div class="second-bg"></div>
+
+	<div class="absolute-container">
+		<div class="row">
+			<div class="tentez_lexperience">
+				<div class="row">
+					<div class="col-7 text">
+						<div class="row">
+							<div class="col-12">
+								<h4>Tentez l'expérience,</h4>
+								<h4>Devenez un des meilleurs</h4>
+								<h4>Apprentis de france</h4>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-4"></div>
+							<div class="col-4"></div>
+							<div class="col-4"></div>
+						</div>
+
+					</div>
+					<div class="col-5 inscription">
+						<div class="row">
+							<div class="col-12">
+								<h4>Inscription</h4>
+								<p>Au concours</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div class="trait"></div>				
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<p class="description">Inscrivez-vous en ligne en toute simplicité pour pouvoir participer au concours du <span>Meilleur Apprentis de France</span>. Tout se passe directement sur notre site internet pour faciliter les inscriptions.</p>
+								<a href="/inscription" class="btn btn-style">je m'inscris</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2>l'actualité</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			{% for index,new in news %}
+				{% if index>0 %}
+					<div class="col-4 offset-2">
+				{% else %}
+					<div class="col-4">
+				{% endif %}
+					<img src="assets/images/maxresdefault.jpg">
+					<div class="description-news">
+						<p><span>{{new.published_at}}</span></p>
+						<h3>{{new.title}}</h3>
+						<div class="trait"></div>
+						<p>{{new.exerpt}}</p>
+						<a href="/actualite/single?id={{new.id}}" class="btn">Lire la suite</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="row">
+			<div class="col-12 text-center">
+				<a href="/actualite" class="btn actu">voir toutes les actus</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="pourquoi-participer">
+		<div class="filtre">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="titre">
+						<h2>Pourquoi participer <br/>au concours ?</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4 offset-2">
+					<p class="bold m10bpc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quibusdam corporis sit voluptas quidem quis delectus numquam nam blanditiis illo, ipsam odio dolore distinctio sint eligendi esse impedit excepturi rem.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde molestiae, velit et! Harum alias magni voluptas soluta, voluptate fuga at facilis autem sapiente. Sunt, fuga nam eaque commodi laboriosam!</p>
+				</div>
+				<div class="col-4 offset-1">
+					<p class="bold m10bpc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quibusdam corporis sit voluptas quidem quis delectus numquam nam blanditiis illo, ipsam odio dolore distinctio sint eligendi esse impedit excepturi rem.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde molestiae, velit et! Harum alias magni voluptas soluta, voluptate fuga at facilis autem sapiente. Sunt, fuga nam eaque commodi laboriosam!</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 text-center">
+					<a href="/" class="btn">en savoir plus</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<div class="rechercher">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h3>trouver un responsable du concours pour s'informer</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center">
+				<form action="/recherche" method="post">
+					<input type="text" name="name" id="name" placeholder="nom"> 
+					<p>ou</p>
+					<input type="number" name="departement" id="departement" placeholder="departement">
+					<input type="submit" class="btn" value="lancer la recherche">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="en-images">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2>Le concours en image</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center ls31">
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center">
+				<a href="/media" class="btn">découvrir la galerie</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="partenaire">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h3>Nos partenaires</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center ls31">
+				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="row text-center">
+			<div class="offset-3 col-2">
+				<p>mentions légales</p>
+			</div>
+			<div class="col-2">
+				<p>plan du site</p>
+			</div>
+			<div class="col-2">
+				<p>contact</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 text-center">
+				<p>Concours MAF 1985 - 2017</p>
+			</div>
+		</div>
+	</footer>
+{% endblock %}

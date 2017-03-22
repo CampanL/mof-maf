@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>MAF - Concours d'un Meilleur Apprentis de France</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/styles/main.css">
+	</head>
+	<body>
+		
+		<header class="container-fluid">
+			<div class="row"> <!-- espace de connection -->
+				<div class="col-11 text-right login_space">
+					<ul>
+						<li><a href="">Espace administrateur</a></li>
+						<li class="border-left"></li>
+						<li><a href="">Espace candidat</a></li>
+					</ul>
+				</div>
+			</div> <!-- fin espace de connection -->
+			
+			<div class="row"><!-- Logo et reseau -->
+				<div class="offset-4 col-2">
+					<a href="/" class="navbar-brand">
+						<img src="assets/images/logo.jpeg" alt="Logo MAF" class="logo">
+					</a>
+				</div>
+			</div><!-- fin logo et connection -->
+		</header>
+
+		<nav class="container-fluid">
+			<div class="row">
+				<ul class="offset-2 col-10">
+					<li><a href="/">home</a></li>
+					<li><a href="/actualite">actualité</a></li>
+					<li><a href="/metier_represente">métiers représenés</a></li>
+					<li><a href="/delegues">les délégués</a></li>
+					<li><a href="/inscription">inscription</a></li>
+					<li><a href="/palmares">palmares</a></li>
+					<li><a href="/media">media</a></li>
+					<li><a href="/contact">contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		{%block content%}
+			
+		{% endblock %}
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script src="https://use.fontawesome.com/5f7d85542e.js"></script>
+
+	</body>
+</html>

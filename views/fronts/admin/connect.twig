@@ -1,0 +1,25 @@
+{% block content %}
+    {% for msg in app.session.flashbag.get('connectError') %}
+        {{msg}}
+    {% endfor %}
+    
+    <form action="/admin/connect" method="post">
+        <label for="mail">Mail</label>
+        <input type="email" name="mail" id="mail">
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password">
+        <input type="submit">
+    </form>
+
+    {% for item in app.session.flashbag.get('errors') %}
+        {% for key,msg in item %}
+            {{ key }}
+            {{ msg }}
+        {% endfor %}
+    {% endfor %}
+
+    {% for msg in app.session.flashbag.get('not_found') %}
+        {{msg}}
+    {% endfor %}
+
+{% endblock %}
