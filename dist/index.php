@@ -68,6 +68,7 @@
 	$app->get('/admin','adminFront.controller:connectForm');
 	$app->post('/admin/connect','adminFront.controller:connect');
 	$app->get('/admin/home','adminFront.controller:index');
+	$app->get('/admin/deconnexion','adminFront.controller:deconnexion');
 	
 	//Root Gestion des admin
 	$app->get('/admin/administrateurs','admin.controller:index');

@@ -91,7 +91,11 @@ class Admins
 
 	public function connect($data){
 
-		$prepare = $this->app['pdo']->prepare('SELECT * FROM admins WHERE mail = (?) AND password = (?)');
+		$prepare = $this->app['pdo']->prepare('SELECT a.name,a.second_name, r.name as role FROM admins as a 
+			LEFT JOIN roles as r 
+			ON a.id_role = r.id
+			WHERE a.mail = (?) AND a.password = (?)'
+		);
 
 		$prepare -> bindValue(1,$data['mail'],\PDO::PARAM_STR);
 		$prepare -> bindValue(2,sha1($data['password']),\PDO::PARAM_STR);

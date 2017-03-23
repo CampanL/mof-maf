@@ -16,5 +16,10 @@
 		{%block content%}
 
 		{% endblock %}
+
+		<footer>
+			<p>Connecté en tant que : {{ app.session.get('user').userName }} {{ app.session.get('user').userSecondName }}</p>
+			<a href="/admin/deconnexion">Déco</a>
+		</footer>
 	</body>
 </html>

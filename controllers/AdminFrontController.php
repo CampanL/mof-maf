@@ -55,12 +55,17 @@ class AdminFrontController{
 
 		$data =  $this->admins->connect( $request->request->all());
 		
+		
 		if (empty($data)) {
 			$redirect = '/admin';
 			$this->app['session']->getFlashBag()->add('not_found', 'Couple mail / mot de passe non reconnue');
 		}
-
-		$this->app['session']->set('user',['username' => $data->mail]);
+		
+		$this->app['session']->set('user',[
+			'userName' => $data->name,
+			'userSecondName' => $data->second_name,
+			'role' => $data->role,
+		]);
 
 		return $this->app->redirect($redirect);
 	}
@@ -70,5 +75,14 @@ class AdminFrontController{
 		$this->utils->accessVerif();
 
 		return $this->app['twig']->render('fronts/admin/home.twig');
+	}
+
+	//deconenct l'utilisateur
+	public function deconnexion(){
+		$this->app['session']->getFlashBag()->add('connectError', 'Vous êtes déconnecté');
+
+		$this->app['session']->set('user', null);	
+		
+		return $this->app->redirect('/admin');
 	}
 }
