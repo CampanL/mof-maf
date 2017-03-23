@@ -12,6 +12,7 @@
 	const DB_DATABASE = 'maf';
 	const DB_USER = 'root';
 	const DB_PASSWORD = '';
+	const URL = 'http://localhost:8080';
 
 	$app = new Application();
 
