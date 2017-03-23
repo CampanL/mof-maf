@@ -6,17 +6,22 @@ use Symfony\Component\HttpFoundation\Request;
 use Silex\Application as App;
 use Models\Admins as Admins;
 use Symfony\Component\Validator\Constraints as Assert;
+use Utils\Utils as Utils;
+
 
 class AdminController{
 	private $admins;
 	private $app;
+	private $utils;
 
 	private $constraint;
+
 
 	public function __construct( App $app ){
 
 		$this->admins = new Admins($app);
 		$this->app = ($app);
+		$this->utils = new Utils($app);
 	}
 
 	/**
@@ -24,7 +29,8 @@ class AdminController{
 	 * @return [view] Retourne la vue associé avec les datas
 	 */
 	public function index(){
-		
+		$this->utils->accessVerif();
+
 		$admins = $this->admins->index();	
 
 		return $this->app['twig']->render('fronts/admin/administrateurs.twig',['data'=>$admins]);
@@ -35,6 +41,8 @@ class AdminController{
 	 * @return [view] Retourne la vue associé
 	 */
 	public function create(){
+		$this->utils->accessVerif();
+
 		return $this->app['twig']->render('fronts/admin/creer.twig');
 	}
 
@@ -44,6 +52,7 @@ class AdminController{
 	 * @return [view]			  Retourne la vue associés² avec les datas
 	 */
 	public function save(Request $request){
+		$this->utils->accessVerif();
 
 		$response = $this->admins->create($request->request->all());
 
@@ -64,6 +73,8 @@ class AdminController{
 	 * @return [view]           Redirige vers la page de gestiopn des admins avec un message de succes
 	 */
 	public function delete(Request $request){
+		$this->utils->accessVerif();
+
 		$id = $request->attributes->all()['id'];
 
 		$this->admins->delete($id);
@@ -78,6 +89,8 @@ class AdminController{
 	 * @return [view]     Retoune la vue avec les datas associées
 	 */
 	public function edit($id){
+		$this->utils->accessVerif();
+
 		$user = $this->admins->read($id);
 
 		return $this->app['twig']->render('fronts/admin/edit.twig',['data'=>$user]);
@@ -89,6 +102,8 @@ class AdminController{
 	 * @return [view]             Redirige vers la page d'administration des admins avec un message
 	 */
 	public function update(Request $request){
+		$this->utils->accessVerif();
+
 		$this->admins->update($request->request->all());
 
 		$this->app['session']->getFlashBag()->add('alert', 'Utilisateur modifié');

@@ -6,20 +6,22 @@ use Symfony\Component\HttpFoundation\Request;
 use Silex\Application as App;
 use Models\Admins as Admins;
 use Symfony\Component\Validator\Constraints as Assert;
-use Traits\Singleton as verifConnect;
+use Utils\Utils as Utils;
 
 class AdminFrontController{
-	use verifConnect;
 
 	private $admins;
 	private $app;
+	private $utils;
 
 	private $constraint;
 
 	public function __construct( App $app ){
 
 		$this->admins = new Admins($app);
-		$this->app = ($app);
+		$this->app = $app;
+
+		$this->utils = new Utils($app);
 
 		$this->constraint = new Assert\Collection(array(
 		    'mail' => [
@@ -65,13 +67,7 @@ class AdminFrontController{
 
 	//Sert la page d'accueil des admins
 	public function index(){
-
-/*		if (empty($this->app['session']->get('user'))) {
-			$this->app['session']->getFlashBag()->add('connectError','Veuillez vous connecter');
-			redirect('/admin');
-			// header redirect ou http
-			// 
-		}	*/
+		$this->utils->accessVerif();
 
 		return $this->app['twig']->render('fronts/admin/home.twig');
 	}
