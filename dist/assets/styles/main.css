@@ -2,22 +2,20 @@
 	padding: 0;
 	margin: 0;
 }
-
 body{
 	overflow-x: hidden;
 }
 
 header{
-	background-color: #ddd;
-	padding-bottom: 2%;
+	background-image: url(../images/bck_hearder.jpg);
+	background-repeat: no-repeat;
+	background-color: #34315C;
+	height: 250px;
 }
 
-h2{
-	margin: 5% 0%;
-	font-size: 2.5em;
+span
+{
 	font-weight: bold;
-	color: #34315c;	
-	text-transform: uppercase;
 }
 
 ul{
@@ -27,27 +25,23 @@ ul{
 li{
 	display: inline-block;
 }
-
-img{
-	max-width: 100%;
+.uppercase
+{
+	text-transform: uppercase;
 }
-
-.logo{
-	width: 90px;
-}
-
 .login_space{
 	text-transform: uppercase;
-	font-size: 0.7em;
+	font-weight: bold;
+	font-size: .8em;
 }
 
 .login_space ul{
-	background-color: white;
 	display: inline-block;
 	padding: 10px 20px;
 	box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+	background-color: #CE172B;
 }
 
 .login_space .border-left{
@@ -56,212 +50,287 @@ img{
 	height: 15px;
 	margin: 0px 15px;
 }
-
-nav{
-	margin-top: 15px;
+.login_space a
+{
+	color: #fff;
+	text-decoration: none;
 }
 
-nav li{
-	padding: 5px 15px;
+.nav li{
+	padding: 15px;
+	font-size: .75em;
 	text-transform: uppercase;
+	margin: 0px 40px;
 }
 
-nav li:hover{
-	background-color: red;
+.nav ul
+{
+	margin-bottom: 0px;
+}
+.nav a
+{
+	text-decoration: none;
+	color: #302953;
+	font-weight: bold;
 }
 
-.container-image, .container-image img{
-	width: 100%;
+.nav span
+{
+	color: #B50B0B;
+}
+.home
+{
+	background-color: #34315C;
 }
 
-.container-image img{
-	height: 780px;
-}
 
-.absolute-container{
-	width: 66.5vw;
+.tester-experience
+{
+	margin-top:600px; 
+}
+.absolute-div
+{
 	position: absolute;
-	top: 140vh;
-	left: 14vw;
+	height: 500px;
 	z-index: 3;
-	text-transform: uppercase;
 }
 
-.absolute-container div.row{
-	margin-bottom: 15px;
+.test-txt, .inscription
+{
+	padding: 30px 0px;
+}
+.test-txt
+{
+	color: #35315d;
+	background-color: #fbfbfb;
+	font-size: 1.5em;
+}
+.inscription
+{
+	background-image: url(../images/pattern_red.png);
+	padding: 30px 50px;
+	color: #fff;
 }
 
-.absolute-container .actu{
-	color: #34315c;
-	font-weight: bold;
-	background-color: white;
-	margin-top: -15%;
-	padding: 1% 4%;
+.white-bar
+{
+	width: 100px;
+	height:	4px;
+	background-color: #fff;
+	margin-bottom: 20px;
 }
-
-.tentez_lexperience .text,.tentez_lexperience .inscription{
-	padding: 25px 40px;
-}
-
-.tentez_lexperience .text{
- 	text-align: center;
- 	color: #34315c;
- 	background-color: white;
-}
-
-.tentez_lexperience .text h3{
- 	font-size: 2.5em;
-}
-
-
-.tentez_lexperience .inscription{
- 	background-color: #b91200;
- 	 color: white;
-}
-
-.tentez_lexperience .inscription h4{
-	font-weight: bold;
-	margin-bottom: 0;
-}
-
-.tentez_lexperience .inscription .trait{
-	background-color: white;
-}
-
-.tentez_lexperience p{
-	font-size: 1.3em;
-}
-
-.tentez_lexperience .description{
-	font-size: 0.7em;
-}
-
-.description-news{
-	position: relative;
-	top: -100px;
-	left: 155px;
-	background-color: white;
-	padding: 5%;
-	color: #34315c;
-}
-
-.description-news .trait{
-	background-color: #34315c;
-}
-
-.description-news h3{
-	font-weight: bold;
-	font-size: 1.2em;
-}
-
-.description-news p{
-	font-size: 0.8em;
-	text-transform: none;
+.inscription-btn button
+{
+	border-radius: 5px;
 	text-align: left;
+	width: 250px;
+	padding: 10px 15px;
 }
-
-.description-news span{
-	color: rgba(155,155,155,0.8);
+.inscription-btn img
+{
+	margin-right: 30px;
 }
-
-.description-news a.btn{
-	color: white;
-	font-weight: bold;
-	width: 80%;
-	margin-left: 10%;
-	background-color: #34315c;
+.inscription-btn a
+{
+	color: #c81d25;
+	text-decoration: none;
 }
-
-.second-bg{
-	background-color: #ddd;
-	height: 115vh;
-	width: 100%;
-}
-
-.pourquoi-participer{
-	background-image: url("../images/maxresdefault.jpg");
+.banner
+{
+	background-image: url(../images/maxresdefault.jpg);
 	background-size: cover;
-	background-repeat: no-repeat;
-	color: white;
+	height: 800px;
+}
+.actu
+{
+	margin-top: 80px;
+	color: #35315d;
+}
+.last-news
+{
+	margin-top: 120px;
+	height: 300px;
+}
+.news
+{	
+	background-color: #fbfbfb;
+	padding: 20px 30px;
+}
+.bg-actu
+{
+	padding-top: 400px;
+	padding-bottom: 150px;
+	background-color: #f3f3f3;
+}
+.blue-bar
+{
+	height: 4px;
+	width: 50px;
+	background-color: #35315d;
+	margin-bottom: 20px;
+}
+.button
+{
+	border-radius: 5px;
+	background-color: #35315d;
+	border-color: #35315d;
+	padding-top: 5px;
+	width: 200px;
+	height: 40px;
+	position: relative;
+	top: 40px;
+	left: 40px;
+	border: solid 2px #35315d;
+}
+.button a
+{
+
+	color: #fbfbfb;
+	text-decoration: none;
 }
 
-.pourquoi-participer h2{
-	color: white;
-}
-
-.pourquoi-participer .filtre{
-	background-color: rgba(63,56,90,0.7);
-}
-
-.pourquoi-participer a.btn{
-	color: #34315c;
+.voir-actu, .savoir-plus
+{
+	margin-top: 100px;
+	width: 30%;
+	margin-left: 35%;
+	padding: 15px;
 	font-weight: bold;
-	background-color: white;
-	padding: 0.5% 5%;
-	text-transform: uppercase;
-	margin: 3% 0;
 }
-.btn-style{
-	background-color: white;
-	color: #b81202;
-	width: 100%;
-}
+.savoir-plus
+{
+	background-color: #fbfbfb
 
-.rechercher{
-	background-color: #ddd;
-	padding: 3% 0;
 }
-
-.rechercher form{
-	margin: 1% 0;
+.voir-actu
+{
+	background-color: #fff;
 }
-
-.rechercher form>*{
+.voir-actu a
+{
+	color: #35315b;
+	text-decoration: none;
+}
+.savoir-plus a
+{
+	color: #35315d;
+	text-decoration: none;
+}
+.participer
+{
+	margin-top: 250px;
+	color: #fbfbfb;
+}
+.participer h1
+{
+	margin-bottom: 50px;
+}
+.bg-participer
+{
+	background-image: url(../images/bck_participation.jpg);
+	height: 800px;
+}
+.responsable
+{
+	color: #35315d;
+	margin-top: 100px;
+}
+.responsable h3
+{
+	font-weight: bold;
+}
+.responsable p, .responsable input, .responsable select, .responsable button, .responsable img
+{
 	display: inline-block;
-	margin-right: 3%;
 }
 
-.trait{
-	width: 20px;
-	height: 2px;
-	margin-bottom: 10px;
+.responsable input, .responsable select, .responsable button
+{
+	text-align: center;
+	width: 300px;
+	height:40px;
 }
-
-.rechercher {
-	color: #34315c;
+.responsable img, .responsable p
+{
+	margin: 0px 10px;
 }
-
-.rechercher h3{
-	text-transform: uppercase;
+.responsable button
+{
+	border-radius: 5px;
+	background-color: #c81d25;
+	border-style: none;
+	border-color: #c81d25;
 	font-weight: bold;
+	color: #fbfbfb;
 }
-
-.en-images{
-	background-color: #ddd;
+.bg-responsable
+{
+	height: 200px;
+	background-image: url(../images/pattern_white.png);
 }
-
-.en-images .btn{
-	text-transform: uppercase;
-	color:#34315c;
-	border: 1px solid #34315c;
-	padding: 1% 2%;
-	margin: 2% 0 4% 0;
-	background-color: white;
+.concours-img
+{
+	margin-top: 150px;
 }
-
-.partenaire h3{
-	text-transform: uppercase;
-	color: #34315c;
-	margin: 2% 5%;
+.concours-img h1
+{
+	color: #35315d;
+	margin-bottom: 50px;
+}
+.concours-img img
+{
+	width:20%;
+}
+.bg-concours-img
+{
+	height: 750px;
+	background-color: #f3f3f3;
+}
+.concours-img button
+{
+	border-radius: 5px;
+	margin-left: 70%;
+	margin-top: 20px;
+	border-style: none;
+	padding: 15px 30px;
+	background-color: #fff;
+}
+.concours-img a
+{
+	color: #35315d;
 	font-weight: bold;
+	text-decoration: none;
 }
 
+.partenair
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 footer{
 	background-color: #34315c;
 	color: white;
-	padding-top: 1%
+	padding-top: 2%
 }
 
+.red-bar , .contact
+{
+	display: inline-block;
+}
+.red-bar
+{
+	height: 100px;
+	width: 4px;
+	background-color: #c81d25;
+}
+.contact li
+{
+	display: block;
+}
+.contact a
+{
+	color: #fff;
+}
 a.btn{
 	border-radius: 0;
 }
@@ -269,10 +338,10 @@ a.btn{
 .bold{
 	font-weight: bold;
 }
-
-.m10bpc{
-	margin-bottom: 10%;
-}
 .ls31{
 	letter-spacing: -0.31em;
+}
+.grey
+{
+	color: #dcdcdc;
 }
