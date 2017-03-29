@@ -9,64 +9,72 @@
 			<p><a href="">accueil</a> > <a href="/inscription">inscription</a> > <span><a href="">formulaire</a></span></p>
 		</div>
 		<div class="formulaire">
-			<div class="commencer">
+
+			<div class="commencer" {% if app.session.get('step') %} style="display:none;"{% endif %}>
 				<h3 class="uppercase text-center">commençons<br/>
 				voltre préinscription en ligne</h3>
 				<p>Avant de commencer, munissez-vous des informations concernant <span>votre établissement de formation</span> et <span>votre contrat d'apprentissage</span>. Préparez également un scan recto/verso de <span>votre carte d'identité </span>et de <span>votre certificat de scolarité</span>.<br/>
 				(format requis: pdf,docx ou jpg)</p>
 				<p>Une fois tout ces éléments réunis, cliquez sur "<span>commencer</span>"</p>
 				<a href="/"><button class="uppercase back">Retour</button></a>
-				<button type="submit" class="uppercase start">commencer</button>
+				<a href="/candidate/start"><button type="submit" class="uppercase start">commencer</button></a>
 			</div>
+
+		{% if app.session.get('step') == 1 %}
+			<div class="step1 doing">
+		{% elseif app.session.get('step') >= 1 %}
 			<div class="step1 done">
+		{% else %}
+			<div class="step1 todo">			
+		{% endif %}
 				<div class="mes-info title">
 					<div class="white-step step text-center"><h3>1</h3></div>
 					<h3 class="uppercase">Mes informations</h3>
 				</div>
 				<div class="formulaire">
-					<form method="post">
+					<form action="/candidate/create" method="post" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-2">
 								<label for="name">Nom: </label><br/>
-								<label for="prenom">Prénom: </label><br/>
-								<label for="naissance">Né(e) le: </label><br/>
-								<label for="metier">Métier: </label>
+								<label for="second_name">Prénom: </label><br/>
+								<label for="born_date">Né(e) le: </label><br/>
+								<label for="jobs">Métier: </label>
 								<label for="mail">Adresse email: </label><br/>
 							</div>
 							<div class="col-4">
-								<input id="name" type="text" name="name" placeholder="Votre nom">
-								<input id="prenom" type="text" name="prenom" placeholder="Votre prénom">
-								<input id="naissance" type="text" name=" naissance" max="2017-01-01" placeholder="aaaa-mm-jj">
-								<input id="metier" type="text" name="metier" placeholder="Votre métier">
-								<input id="mail" type="email" name="mail" placeholder="Votre adresse email">
+								<input required id="name" type="text" name="name" placeholder="Votre nom">
+								<input required id="second_name" type="text" name="second_name" placeholder="Votre prénom">
+								<input required id="born_date" type="text" name=" born_date" max="2017-01-01" placeholder="aaaa-mm-jj">
+								<input required id="job" type="text" name="job" placeholder="Votre métier">
+								<input required id="mail" type="email" name="mail" placeholder="Votre adresse email">
 							</div>
 							<div class="col-2">
-							<label id="" for="adresse">Adresse: </label><br/>
-							<label id="" for="code-postal">Code postal: </label><br/>
-							<label id="" for="ville">Ville: </label><br/>
-							<label id="" for="departement">Département: </label><br/>
+							<label id="" for="address">Adresse: </label><br/>
+							<label id="" for="postal_code">Code postal: </label><br/>
+							<label id="" for="city">Ville: </label><br/>
+							<label id="" for="department">Département: </label><br/>
 							</div>
 							<div class="col-4">
-								<input type="text" name="adresse" id="adresse" placeholder="Votre adresse">
-								<input type="text" name="code-postal" id="code-postal" placeholder="Votre code postal">
-								<input type="text" name="ville" id="ville" placeholder="Votre ville">
-								<input type="number" name="departement" id="departement" placeholder="Votre département" min="1" max="95">
+								<input required type="text" name="address" id="address" placeholder="Votre adresse">
+								<input required type="text" name="postal_code" id="postal_code" placeholder="Votre code postal">
+								<input required type="text" name="city" id="city" placeholder="Votre ville">
+								<input required type="number" name="department" id="department" placeholder="Votre département" min="1" max="95">
 							</div>
 						</div>
 						<div class="row annexe text-center">
 							<h3 class="uppercase col-12 text-left">Document annexes</h3>
 							<div class="col-3">
-							<label for="carte">Carte d'identité<br/>
+							<label for="identity_card">Carte d'identité<br/>
 							recto/verso</label>
 							</div>
 							<div class="col-3">
-								<input type="file" name="carte" id="carte" accept=".pdf, .jpg, .jpeg">
+								<input required type="file" name=" identity_card" id=" identity_card" accept=".pdf, .jpg, .jpeg">
 							</div>
 							<div class="col-3">
-								<label for="certificat">Certificat de<br/>scolarité</label>
+								<label for="school_certificate">Certificat de<br/>scolarité</label>
 							</div>
 							<div class="col-3">
-								<input type="file" name="certificat" id="certificat" accept=".pdf, .jpg">
+								<input required type="file" name="school_certificate" id="school_certificate" accept=".pdf, .jpg">
 							</div>
 						</div>
 						<a href="/"><button class="uppercase cancel">annuler</button></a>	
@@ -74,35 +82,42 @@
 					</form>
 				</div>
 			</div>
+
+		{% if app.session.get('step') == 2 %}
 			<div class="step2 doing">
+		{% elseif app.session.get('step') >= 2 %}
+			<div class="step2 done">
+		{% else %}
+			<div class="step2 todo">			
+		{% endif %}
 				<div class="etablissement-formation title">
 					<div class="white-step step text-center"><h3>2</h3></div>
 					<h3 class="uppercase">établissement de formation</h3>
 				</div>
 				<div class="formulaire">
-					<form method="post">
+					<form action="/etashbliment/create" method="post">
 						<div class="row">
 							<div class="col-2">
-								<label for="etablissement">Établissement: </label><br/>
-								<label for="code-postal-formation">Code postal: </label><br/>
-								<label for="telephone">Téléphone</label><br/>
-								<label for="formateur">Formateur</label><br/>
+								<label for="name">Établissement: </label><br/>
+								<label for="postal_code">Code postal: </label><br/>
+								<label for="phone">Téléphone</label><br/>
+								<label for="former">Formateur</label><br/>
 							</div>
 							<div class="col-4">
-								<input type="text" name="etablissmeent" id="etablissmeent" placeholder="Nom de l'établissement">
-								<input type="text" name="code-postal-formation" id="code-postal-formation" placeholder="Code postal de l'établissement">
-								<input type="text" name="telephone" id="telephone" placeholder="Téléphone de l'établissement">
-								<input type="text" name="formateur" id="formateur" placeholder="Nom de votre formateur">
+								<input required type="text" name="name" id="name" placeholder="Nom de l'établissement">
+								<input required type="text" name="postal_code" id="postal_code" placeholder="Code postal de l'établissement">
+								<input required type="text" name="phone" id="phone" placeholder="Téléphone de l'établissement">
+								<input required type="text" name="former" id="former" placeholder="Nom de votre formateur">
 							</div>
 							<div class="col-2">
-								<label for="adresse-formation">Adresse: </label><br/>
-								<label for="ville-formation">Ville: </label><br/>
-								<label for="mail-formation">Email</label><br/>
+								<label for="address">Adresse: </label><br/>
+								<label for="city">Ville: </label><br/>
+								<label for="mail">Email</label><br/>
 							</div>
 							<div class="col-4">
-								<input type="text" name="adresse-formation" id="adresse-formation" placeholder="Adresse de l'établissement">
-								<input type="text" name="ville-formation" id="ville-formation" placeholder="Ville de l'établissement">
-								<input type="email" name="mail-formation" id="mail-formation" placeholder="Email de l'établissement">
+								<input required type="text" name="address" id="address" placeholder="Adresse de l'établissement">
+								<input required type="text" name="city" id="city" placeholder="Ville de l'établissement">
+								<input required type="email" name="mail" id="mail" placeholder="Email de l'établissement">
 							</div>
 						</div>
 						<a href="/"><button class="uppercase cancel">précédent</button></a>	
@@ -110,35 +125,42 @@
 					</form>
 				</div>
 			</div>
-			<div class="step3 todo">
+
+			{% if app.session.get('step') == 3 %}
+				<div class="step3 doing">
+			{% elseif app.session.get('step') >= 3 %}
+				<div class="step3 done">
+			{% else %}
+				<div class="step3 todo">			
+			{% endif %}
 				<div class="contrat-apprentissage title">
 					<div class="white-step step text-center"><h3>3</h3></div>
 					<h3 class="uppercase">contrat d'apprentissage</h3>
 				</div>
 				<div class="formulaire">
-					<form method="post">
+					<form action="/contract/create" method="post">
 						<div class="row">
 							<div class="col-2">
-								<label for="etablissement-emploie">Établissement: </label><br/>
-								<label for="code-postal-employeur">Code postal: </label><br/>
-								<label for="telephone-employeur">Téléphone</label><br/>
-								<label for="employeur">Employeur</label><br/>
+								<label for="name">Établissement: </label><br/>
+								<label for="postal_code">Code postal: </label><br/>
+								<label for="phone">Téléphone</label><br/>
+								<label for="employer">Employeur</label><br/>
 							</div>
 							<div class="col-4">
-								<input type="text" name="etablissmeent-emploie" id="etablissmeent-emploie" placeholder="Nom de l'employeur">
-								<input type="text" name="code-postal-emploie" id="code-postal-emploie" placeholder="Code postal de l'employeur">
-								<input type="text" name="telephone-emploi" id="telephone-emploi" placeholder="Téléphone de votre employeur">
-								<input type="text" name="employeur" id="employeur" placeholder="Nom de votre employeur">
+								<input required type="text" name="name" id="name" placeholder="Nom de l'employeur">
+								<input required type="text" name="postal_code" id="postal_code" placeholder="Code postal de l'employeur">
+								<input required type="text" name="phone" id="phone" placeholder="Téléphone de votre employeur">
+								<input required type="text" name="employer" id="employer" placeholder="Nom de votre employeur">
 							</div>
 							<div class="col-2">
-								<label for="adresse-emploie">Adresse: </label><br/>
-								<label for="ville-emploie">Ville: </label><br/>
-								<label for="mail-emploie">Email</label><br/>
+								<label for="address">Adresse: </label><br/>
+								<label for="city">Ville: </label><br/>
+								<label for="mail">Email</label><br/>
 							</div>
 							<div class="col-4">
-								<input type="text" name="adresse-emploie" id="adresse-emploie" placeholder="Adresse de l'employeur">
-								<input type="text" name="ville-emploie" id="ville-emploie" placeholder="Ville de l'employeur">
-								<input type="email" name="mail-emploie" id="mail-emploie" placeholder="Email de l'employeur">
+								<input required type="text" name="address" id="address" placeholder="Adresse de l'employeur">
+								<input required type="text" name="city" id="city" placeholder="Ville de l'employeur">
+								<input required type="email" name="mail" id="mail" placeholder="Email de l'employeur">
 							</div>
 						</div>
 						<a href="/"><button class="uppercase cancel">précédent</button></a>	
@@ -147,27 +169,39 @@
 
 				</div>
 			</div>
-			<div class="step4 todo">
+
+			{% if app.session.get('step') == 4 %}
+				<div class="step4 doing">
+			{% elseif app.session.get('step') >= 4 %}
+				<div class="step4 done">
+			{% else %}
+				<div class="step4 todo">			
+			{% endif %}
 				<div class="comfirmation title">
 					<div class="white-step step text-center"><h3>4</h3></div>
 					<h3 class="uppercase">réglement et confirmation</h3>
 				</div>
 				<div class="formulaire">
-					<form method="post" >
+					<form method="post" action="/candidate/save">
 						<div class="row">
 							<div class="col-8 offset-2 pdf">
-								<embed src="assets/pdf/reglement_du_concours_2017.pdf" width="100%"  height="600rem"/>
+								<embed src="/assets/pdf/reglement_du_concours_2017.pdf" width="100%"  height="600rem"/>
 							</div>
 							<div class="col-8 offset-2">
-									<input class="form-check-input" type="radio" name="prise-en-conscience" id="prise-en-conscience" value="">
+									<input required class="form-check-input" type="radio" name="prise-en-conscience" id="prise-en-conscience" value="">
 									<label>j'ai pris connaissance et j'accepte le réglement général du concour maf</label>
-								<button type="submit"></button>
+								<button type="submit">S'inscrire</button>
 							</div>
 						</div>
 					</form>
 				</div>
 			</div>
-			<div class="finished">
+
+			{% if app.session.get('step') == 5 %}
+				<div class="finished" style="display:block">
+			{% else %}
+				<div class="finished" style="display:none">			
+			{% endif %}
 				<div class="col-8 offset-2">
 					<h1 class="uppercase text-center">Félicitations</h1>
 					<p><span>Votre demande d'inscription au concours du meilleur apprentis de france a bien été prise en compte</span></p>

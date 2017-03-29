@@ -19,7 +19,7 @@ class CandidateController extends Controllers{
 
 	public function create(){
 		$this->utils->accessVerif();
-
+		
 		return $this->app['twig']->render('fronts/register.twig');
 	}
 
@@ -86,8 +86,9 @@ class CandidateController extends Controllers{
 		$response = $this->model->create($candidate);
 
 		$this->app['session']->set('registration',null);
+		$this->app['session']->set('step',5);
 
-		return $this->app->redirect('/');
+		return $this->app->redirect('/candidate/create');
 	}
 
 	public function delete(Request $request){
@@ -127,6 +128,7 @@ class CandidateController extends Controllers{
 
 		move_uploaded_file($data['identity_card']['tmp_name'],'assets'.$data['identity_card']['name']);
 		$this->app['session']->set('registration',['candidate'=>$data,'step'=>2]);
+		$this->app['session']->set('step',2);
 
 		return $this->app->redirect('/candidate/create');
 	}
@@ -179,5 +181,13 @@ class CandidateController extends Controllers{
 		$this->model->update($candidateData);
 
 		return $this->app->redirect('/'.'admin/candidates');
+	}
+
+	public function start()	{
+		$this->utils->accessVerif();
+
+		$this->app['session']->set('step',1);
+
+		return $this->app->redirect('/candidate/create');
 	}
 }

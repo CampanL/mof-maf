@@ -2,21 +2,21 @@
 
 {% block content %}
     <form action="/candidate/create" method="post" enctype="multipart/form-data">
-    	<input type="text" id="name" name="name">
-    	<input type="text" name="second_name" id="second_name">
-    	<input type="file" name="identity_card" id="identity_card" accept=".jpg, .png, .pdf">
-    	<input type="file" name="school_certificate" id="school_certificate" accept=".jpg, .png, .pdf">
-    	<input type="submit">
+    	<input required="true" type="text" id="name" name="name">
+    	<input required="true" type="text" name="second_name" id="second_name">
+    	<input required="true" type="file" name="identity_card" id="identity_card" accept=".jpg, .png, .pdf">
+    	<input required="true" type="file" name="school_certificate" id="school_certificate" accept=".jpg, .png, .pdf">
+    	<input required="true" type="submit">
     </form>
 	
 	<form action="/etashbliment/create" method="post">
-    	<input type="text" name="name" id="name">
-    	<input type="submit">
+    	<input required="true" type="text" name="name" id="name">
+    	<input required="true" type="submit">
 	</form>
 
 	<form action="/contract/create" method="post">
-    	<input type="text" name="name" id="name">
-    	<input type="submit">
+    	<input required="true" type="text" name="name" id="name">
+    	<input required="true" type="submit">
 	</form>
 
 {% endblock %}
