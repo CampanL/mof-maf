@@ -61,7 +61,7 @@ button:hover
 }
 
 .nav li{
-	padding: 15px 55px;
+	padding: 15px 3.5rem;
 	font-size: .75em;
 	text-transform: uppercase;
 }
@@ -86,7 +86,7 @@ button:hover
 }
 .reseau-sociaux img
 {
-	margin-left:30px;
+	margin-left:1rem;
 }
 .reseau-sociaux
 {
@@ -102,7 +102,7 @@ button:hover
 
 .tester-experience
 {
-	margin-top:600px; 
+	margin-top:60%; 
 }
 .absolute-div
 {
@@ -113,7 +113,7 @@ button:hover
 
 .test-txt, .inscription
 {
-	padding: 30px 0px;
+	padding: 3% 0px;
 }
 .test-txt
 {
@@ -124,7 +124,7 @@ button:hover
 .inscription
 {
 	background-image: url(../images/pattern_red.png);
-	padding: 30px 50px;
+	padding: 3%;
 	color: #fff;
 }
 
@@ -137,19 +137,16 @@ button:hover
 }
 .inscription-btn button
 {
-	border-radius: 5px;
 	text-align: left;
-	width: 250px;
+	width: 100%;
+	border:none;
 	padding: 10px 15px;
+	color: #c81d25;
+	text-decoration: none;
 }
 .inscription-btn img
 {
 	margin-right: 30px;
-}
-.inscription-btn a
-{
-	color: #c81d25;
-	text-decoration: none;
 }
 .banner
 {
@@ -159,12 +156,12 @@ button:hover
 }
 .actu
 {
-	margin-top: 80px;
+	margin-top: 7%;
 	color: #35315d;
 }
 .last-news
 {
-	margin-top: 120px;
+	margin-top: 12%;
 	height: 300px;
 }
 .news
@@ -172,14 +169,21 @@ button:hover
 	background-color: #fbfbfb;
 	padding: 20px 30px;
 }
+
 .bg-actu
 {
 	background-image: url(../images/img_medaille.png);
-	background-position-x:150px;
+	background-position-x:10%;
 	background-repeat: no-repeat;
-	padding-top: 400px;
-	padding-bottom: 150px;
+	padding-top: 25%;
+	padding-bottom: 10%;
 	background-color: #f3f3f3;
+}
+.bg-actu .col-4
+{
+  background: no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
 }
 .blue-bar
 {
@@ -188,61 +192,55 @@ button:hover
 	background-color: #35315d;
 	margin-bottom: 20px;
 }
-.button
+.news button
 {
 	border-radius: 5px;
 	background-color: #35315d;
 	border-color: #35315d;
 	padding-top: 5px;
-	width: 200px;
-	height: 40px;
+	width: 60%;
+	height: 20%;
 	position: relative;
 	top: 40px;
-	left: 40px;
 	border: solid 2px #35315d;
-}
-.button a
-{
-
 	color: #fbfbfb;
 	text-decoration: none;
 }
+.news button:hover
+{
+	background-color: #fbfbfb;
+	border: 2px solid #35315d;
+	color:#35315d;
+	text-decoration: none;
+}
+
 
 .voir-actu, .savoir-plus
 {
-	margin-top: 100px;
+	margin-top: 10%;
 	width: 30%;
 	margin-left: 35%;
 	padding: 15px;
 	font-weight: bold;
-}
-.savoir-plus
-{
-	background-color: #fbfbfb
-
-}
-.voir-actu
-{
-	background-color: #fff;
-}
-.voir-actu a
-{
+	background-color: #fbfbfb;
+	border: 2px solid rgba(0,0,0,0);
 	color: #35315b;
 	text-decoration: none;
 }
-.savoir-plus a
+.voir-actu:hover, .savoir-plus:hover
 {
-	color: #35315d;
-	text-decoration: none;
+	background-color: #35315d;
+	color: #fbfbfb;
+	border-color:#fbfbfb;
 }
 .participer
 {
-	margin-top: 250px;
+	margin-top: 25%;
 	color: #fbfbfb;
 }
 .participer h1
 {
-	margin-bottom: 50px;
+	margin-bottom: 5%;
 }
 .bg-participer
 {
@@ -252,7 +250,7 @@ button:hover
 .responsable
 {
 	color: #35315d;
-	margin-top: 100px;
+	margin-top: 10%;
 }
 .responsable h3
 {
@@ -266,21 +264,26 @@ button:hover
 .responsable input, .responsable select, .responsable button
 {
 	text-align: center;
-	width: 300px;
-	height:40px;
+	width: 25%;
+	height:3rem;
 }
 .responsable img, .responsable p
 {
-	margin: 0px 10px;
+	margin: 0px 1%;
 }
 .responsable button
 {
 	border-radius: 5px;
 	background-color: #c81d25;
 	border-style: none;
-	border-color: #c81d25;
+	border: 2px solid #c81d25;
 	font-weight: bold;
 	color: #fbfbfb;
+}
+.responsable button:hover
+{
+	background-color: #f3f3f3;
+	color: #c81d25;
 }
 .bg-responsable
 {
@@ -289,7 +292,7 @@ button:hover
 }
 .concours-img
 {
-	margin-top: 150px;
+	margin-top: 15%;
 }
 .concours-img h1
 {
@@ -309,22 +312,24 @@ button:hover
 {
 	border-radius: 5px;
 	margin-left: 70%;
-	margin-top: 20px;
+	margin-top: 3%;
 	border-style: none;
 	padding: 15px 30px;
 	background-color: #fff;
-}
-.concours-img a
-{
+	border: 2px solid #35315d;
 	color: #35315d;
 	font-weight: bold;
 	text-decoration: none;
 }
-
+.concours-img button:hover
+{
+	background-color: #35315d;
+	color: #fbfbfb;
+}
 .partenair
 {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 3%;
+	margin-bottom: 3%;
 }
 
 .inscription-banner
@@ -454,15 +459,16 @@ button:hover
 	margin-top: 50px;
 	font-size: 1.3em;
 	color: #35315d;
-	height: 50px;
-	padding-top: 10px;
+	padding: 10px 0px;
+	border:2px solid #f3f3f3;
 	border-radius: 5px;
 	font-weight: bold;
 	background-color: #f3f3f3;
 }
 .dl-button:hover
 {
-	color: #35315d;
+	color: #fbfbfb;
+	background-color: #35315d;
 	text-decoration: none;
 }
 .steps
@@ -513,9 +519,10 @@ button:hover
 	color: #35315d;
 	padding-top: 50px;
 }
-.medailles h1
+.medaille h1
 {
 	font-weight: bolder;
+	margin-bottom: 2rem;
 }
 .medaille img, .medaille-txt
 {
@@ -524,36 +531,38 @@ button:hover
 .medaille img
 {
 	position: relative;
-	top: -40px;
-	margin-right: 20px;
+	top: -2rem;
+	margin-right: 2rem;
 }
 .bg-medaille
 {
 	background-color: #f3f3f3;
 	background-image: url(../images/img_medaille.png);
 	background-repeat: no-repeat;
-	background-position-x: 1100px;
+	background-position-x: 90%;
 	height: 800px;
 }
 .palmares-button
 {
-	margin-top: 100px;
+	margin-top: 10%;
 	font-size: 1.3em;
 	padding: 20px 15px;
 	border-radius: 5px;
 	font-weight: bold;
+	border:2px solid #c81d25;
 	background-color: #c81d25;
 	color: #f3f3f3;
 }
 .palmares-button:hover
 {
+	background-color: #fbfbfb;
 	text-decoration: none;
-	color: #f3f3f3;
+	color: #c81d25;
 }
 .bienvenue
 {
 	color: #f3f3f3;
-	margin-top: 40px;
+	margin-top: 5%;
 }
 .bg-bienvenue
 {
@@ -562,7 +571,7 @@ button:hover
 }
 .register-arian
 {
-	margin-top: 60px;
+	margin-top: 6%;
 }
 .formulaire
 {
@@ -575,7 +584,7 @@ button:hover
 }
 .commencer button
 {
-	width: 150px;
+	width: 20%;
 	padding: 10px 0px;
 	font-weight: bold;
 	border-radius: 10px;
@@ -585,12 +594,22 @@ button:hover
 {
 	color: #35315d;
 	background-color: rgba(0,0,0,0);
-	margin:0% 3% 5% 32%;
+	margin:0% 3% 5% 28%;
+}
+.back:hover
+{
+	color: #fbfbfb;
+	background-color: #35315d;
 }
 .start
 {
 	background-color: #35315d;
 	color: #f3f3f3;	
+}
+.start:hover
+{
+	background-color: rgba(0,0,0,0);
+	color: #35315d;
 }
 .bg-formulaire
 {
@@ -636,7 +655,7 @@ button:hover
 }
 .formulaire
 {
-	margin-top: 45px;
+	margin-top: 3%;
 }
 .formulaire label
 {
@@ -666,18 +685,31 @@ button:hover
 	background-color: rgba(0,0,0,0);
 	border: 2px solid #35315d;
 	border-radius: 10px;
-	padding: 8px 15px;
+	padding: 10px 15px;
 	margin-left: 60%;
 	margin-right: 3%;
+	color: #35315d;
+	font-weight: bold;
+}
+.cancel:hover
+{
+	background-color: #35315d;
+	color: #fbfbfb;
 }
 .continue
 {
+	border: 2px solid #35315d;
 	padding: 10px 15px;
 	border-radius: 10px;
 	background-color: #35315d;
 	font-weight: bold;
 	color: #f3f3f3;
-	border: none;
+}
+.continue:hover
+{
+	border-color: #35315d;
+	background-color: #f3f3f3;
+	color: #35315d;
 }
 .precedent .continue
 {
@@ -694,7 +726,7 @@ button:hover
 .finished
 {
 	color: #35315d;
-	margin-bottom: 50px;
+	margin-bottom: 5%;
 }
 .finished button
 {
@@ -706,6 +738,11 @@ button:hover
 	color: #f3f3f3;
 	border: none;
 	border: 2px solid #35315d;
+}
+.finished button:hover
+{
+	background-color: #fbfbfb;
+	color: #35315d;
 }
 footer{
 	background-color: #34315c;
