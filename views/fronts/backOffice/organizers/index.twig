@@ -1,0 +1,35 @@
+{% extends 'layouts/admin_master.twig' %}
+
+{% block content %}
+	{% for alert in app.session.flashbag.get('delete')%}
+        <p>{{alert}}</p>
+    {% endfor %}
+	<a href="/admin/organizers/create">Ajouter</a>
+	<div class="content">
+	<div class="row">
+		<div class="offset-1 col-2"><strong>Nom</strong></div>
+		<div class="col-2"><strong>Prénom</strong></div>
+		<div class="col-2"><strong>Email</strong></div>
+	</div>
+	<div class="content">
+		{% for organiser in data %}
+		    <div class="row">
+		    	<div class="offset-1 col-2">
+		    		<p>{{organiser.name}}</p>
+		    	</div>
+		    	<div class="col-2">
+		    		<p>{{organiser.second_name}}</p>
+		    	</div>
+		    	<div class="col-2">
+		    		<p>{{organiser.mail}}</p>
+		    	</div>
+		    	<div class="col-2">
+		    		<a href="/admin/organizers/edit/{{organiser.id}}">modifier</a>
+		    	</div>
+		    	<div class="col-2">
+		    		<a href="/admin/organizers/delete/{{organiser.id}}">supprimer</a>
+		    	</div>
+		    </div>
+		{% endfor %}
+	</div>
+{% endblock %}

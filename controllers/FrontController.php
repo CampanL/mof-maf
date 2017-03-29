@@ -19,7 +19,6 @@ class FrontController{
 		$this->app = ($app);
 	}
 
-	//Sert la page d'accueil des admins
 	public function index(){
 
 		$news = $this->news->getNumber(2);

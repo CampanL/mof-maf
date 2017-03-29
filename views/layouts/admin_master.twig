@@ -3,23 +3,50 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>MaF admin</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="/assets/styles/main.css">
 	</head>
 	<body>
 	    <nav>
 	    	<ul>
+	    		{% if app.session.get('user').role == 'admin' %}
+		    		<li>
+		    			<a href="/admin/admins">Administrateurs</a>
+		    		</li>
+	    		{% endif %}
+	    		{% if app.session.get('user').role == 'admin' %}
+		    		<li>
+		    			<a href="/admin/news">Actualités</a>
+		    		</li>
+	    		{% endif %}
 	    		<li>
-	    			<a href="/admin/administrateurs">Administrateurs</a>
+	    			<a href="/admin/candidates">Candidats</a>
 	    		</li>
+	    		{% if app.session.get('user').role == 'admin' %}
+		    		<li>
+		    			<a href="/admin/organizers">Organisateurs</a>
+		    		</li>
+	    		{% endif %}
 	    	</ul>
 	    </nav>
+	    
 		{%block content%}
 
 		{% endblock %}
 
 		<footer>
-			<p>Connecté en tant que : {{ app.session.get('user').userName }} {{ app.session.get('user').userSecondName }}</p>
+			<p>Connecté en tant que : 
+				{% if app.session.get('user')%}
+					{{ app.session.get('user').userName }} 
+					{{ app.session.get('user').userSecondName }}
+				{% endif %}
+			</p>
 			<a href="/admin/deconnexion">Déco</a>
 		</footer>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script src="https://use.fontawesome.com/5f7d85542e.js"></script>
 	</body>
 </html>

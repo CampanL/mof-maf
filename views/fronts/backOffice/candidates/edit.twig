@@ -1,0 +1,163 @@
+{% extends 'layouts/admin_master.twig' %}
+
+{% block content %}
+    <form action="/admin/candidates/update" method="post" class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Profil</h3>                        
+                    </div>
+                </div>
+                <div class="from-group row">
+                    <input type="text" id="id" name="id"  class="form-control" value="{{candidate.id}}" style="display:none">
+                </div>
+
+                <div class="form-group row">
+                    <label for="name" class="col-3 col-form-label">Prénom</label>
+                    <input type="text" id="name" name="name"  class="form-control col-9" value="{{candidate.name}}">
+                </div>
+                <div class="form-group row">
+                    <label for="second_name" class="col-3 col-form-label">Nom</label>
+                    <input type="text" id="second_name" name="second_name"  class="form-control col-9" value="{{candidate.second_name}}">
+                </div>
+                <div class="form-group row">
+                    <label for="born_date" class="col-3 col-form-label">Né le</label>
+                    <input type="text" id="born_date" name="born_date"  class="form-control col-9" value="{{candidate.born_date}}">
+                </div>
+                <div class="form-group row">
+                    <label for="address" class="col-3 col-form-label">Adresse</label>
+                    <input type="text" id="address" name="address"  class="form-control col-9" value="{{candidate.address}}">
+                </div>
+                <div class="form-group row">
+                    <label for="mail" class="col-3 col-form-label">Adresse Mail</label>
+                    <input type="text" id="mail" name="mail"  class="form-control col-9" value="{{candidate.mail}}">
+                </div>
+                <div class="form-group row">
+                    <label for="city" class="col-3 col-form-label">Ville</label>
+                    <input type="text" id="city" name="city"  class="form-control col-9" value="{{candidate.city}}">
+                </div>
+                <div class="form-group row">
+                    <label for="department" class="col-3 col-form-label">Département</label>
+                    <input type="number" id="department" name="department"  class="form-control col-9" value="{{candidate.department}}">
+                </div>
+                <div class="form-group row">
+                    <label for="postal_code" class="col-3 col-form-label">Code postale</label>
+                    <input type="number" id="postal_code" name="postal_code"  class="form-control col-9" value="{{candidate.postal_code}}">
+                </div>                
+                <div class="form-group row">
+                    <label for="job" class="col-3 col-form-label">Métier</label>
+                    <input type="text" id="job" name="job"  class="form-control col-9" value="{{candidate.job}}">
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <p>Status</p>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label form-check-inline">
+                            <input type="radio" id="status" name="status" value="waiting" class="form-check-input" {% if candidate.status == 'waiting' %}checked{% endif %}> Attente
+                        </label>
+                        <label class="form-check-label form-check-inline">
+                            <input type="radio" id="status" name="status" value="error" class="form-check-input" {% if candidate.status == 'error' %}checked{% endif %}> Erreur
+                        </label>
+                        <label class="form-check-label form-check-inline">
+                            <input type="radio" id="status" name="status" value="validate" class="form-check-input" {% if candidate.status == 'validate' %}checked{% endif %}> Validé
+                        </label>
+                    </div>
+                </div>        
+            </div>
+
+            <div class="col-6">
+                <div class="row">
+                    <div class="offset-2 col-10">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>Contrat D'apprentissage</h3>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="contract-name" class="col-3 col-form-label">Etablissement</label>
+                            <input type="text" id="contract-name" name="contract-name"  class="form-control col-9" value="{{contract.name}}">
+                        </div>
+                        <div class="form-group row">
+                            <label for="contract-postal_code" class="col-3 col-form-label">Code Postale</label>
+                            <input type="text" id="contract-postal_code" name="contract-postal_code"  class="form-control col-9" value="{{contract.postal_code}}">
+                        </div>
+                        <div class="form-group row">
+                            <label for="contract-phone" class="col-3 col-form-label">Tel</label>
+                            <input type="text" id="contract-phone" name="contract-phone"  class="form-control col-9" value="{{contract.phone}}">
+                        </div>
+                       <div class="form-group row">
+                            <label for="contract-mail" class="col-3 col-form-label">Mail</label>
+                            <input type="email" id="contract-mail" name="contract-mail"  class="form-control col-9" value="{{contract.mail}}">
+                        </div>
+                       <div class="form-group row">
+                            <label for="contract-employer" class="col-3 col-form-label">Employeur</label>
+                            <input type="text" id="contract-employer" name="contract-employer"  class="form-control col-9" value="{{contract.employer}}">
+                        </div>
+                       <div class="form-group row">
+                            <label for="contract-address" class="col-3 col-form-label">Adresse</label>
+                            <input type="text" id="contract-address" name="contract-address"  class="form-control col-9" value="{{contract.address}}">
+                        </div>
+                       <div class="form-group row">
+                            <label for="contract-city" class="col-3 col-form-label">Ville</label>
+                            <input type="text" id="contract-city" name="contract-city"  class="form-control col-9" value="{{contract.city}}">
+                        </div>
+                        <div class="form-groupe">
+                            <input type="text" name="contract-id" id="contract-id" value="{{contract.id}}" style="display:none;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-2 col-10">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>Ecole</h3>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="etablishment-name" class="col-3 col-form-label">Etablissement</label>
+                            <input type="text" id="etablishment-name" name="etablishment-name"  class="form-control col-9" value="{{etablishment.name}}">
+                        </div>
+                        <div class="form-group row">
+                            <label for="etablishment-phone" class="col-3 col-form-label">Tel</label>
+                            <input type="text" id="etablishment-phone" name="etablishment-phone"  class="form-control col-9" value="{{etablishment.phone}}">
+                        </div>
+                        <div class="form-group row">
+                            <label for="etablishment-postal_code" class="col-3 col-form-label">Code Postale</label>
+                            <input type="text" id="etablishment-postal_code" name="etablishment-postal_code"  class="form-control col-9" value="{{etablishment.postal_code}}">
+                        </div>
+                       <div class="form-group row">
+                            <label for="etablishment-former" class="col-3 col-form-label">Formateur</label>
+                            <input type="text" id="etablishment-former" name="etablishment-former"  class="form-control col-9" value="{{etablishment.former}}">
+                        </div>
+                       <div class="form-group row">
+                            <label for="etablishment-address" class="col-3 col-form-label">Adresse</label>
+                            <input type="text" id="etablishment-address" name="etablishment-address"  class="form-control col-9" value="{{etablishment.address}}">
+                        </div>
+                       <div class="form-group row">
+                            <label for="etablishment-city" class="col-3 col-form-label">Ville</label>
+                            <input type="text" id="etablishment-city" name="etablishment-city"  class="form-control col-9" value="{{etablishment.city}}">
+                        </div>
+                       <div class="form-group row">
+                            <label for="etablishment-mail" class="col-3 col-form-label">Mail</label>
+                            <input type="email" id="etablishment-mail" name="etablishment-mail"  class="form-control col-9" value="{{etablishment.mail}}">
+                        </div>
+                        <div class="form-groupe">
+                            <input type="text" name="etablishment-id" id="etablishment-id" value="{{etablishment.id}}" style="display:none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-groupe row">
+            <div class="col-12">
+                <input type="submit" class="btn btn-primary" value="Modifier">
+            </div>
+        </div>
+    </form>
+    {% for alert in app.session.flashbag.get('errors') %}
+        <p>{{alert}}</p>
+    {% endfor %}
+{% endblock %}

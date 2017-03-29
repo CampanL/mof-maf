@@ -1,0 +1,43 @@
+{% extends 'layouts/admin_master.twig' %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2"><strong>Nom candidat</strong></div>
+			<div class="col-md-2"><strong>Status de la demande</strong></div>
+			<div class="col-md-2"><strong>Nom de l'ecole</strong></div>
+			<div class="col-md-2"><strong>Nom de l'entreprise d'accueil</strong></div>
+		</div>
+		{% for candidat in data %}
+			<div class="row">
+				<div class="col-md-2">
+					<p>{{candidat.name}}</p>
+				</div>
+				<div class="col-md-2">
+					{% if candidat.status == 'error' %}
+						<p>erreur</p>
+					{% endif %}
+					{% if candidat.status == 'validate' %}
+						<p>validé</p>
+					{% endif %}
+					{% if candidat.status == 'waiting' %}
+						<p>en attente</p>
+					{% endif %}
+				</div>
+				<div class="col-md-2">
+					<p>{{candidat.contract_name}}</p>
+				</div>
+				<div class="col-md-2">
+					<p>{{candidat.etablishment_name}}</p>
+				</div>
+				<div class="col-md-2">
+		    		<a href="/admin/candidates/edit/{{candidat.id}}">modifier</a>
+				</div>
+				<div class="col-md-2">
+		    		<a href="/admin/candidates/delete/{{candidat.id}}">supprimer</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+    
+{% endblock %}

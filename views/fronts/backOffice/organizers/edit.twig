@@ -1,0 +1,63 @@
+{% extends 'layouts/admin_master.twig' %}
+
+{% block content %}
+    <form action="/admin/organizers/update" method="post" class="container">
+        <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Email</label>
+            <div class="col-10">
+                <input type="text" id="mail" name="mail" placeholder="mail" class="form-control" value="{{data.mail}}">
+            </div>    
+        </div>
+        <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Mot de passe</label>
+            <div class="col-10">
+                <input type="password" id="password" name="password" class="form-control" placeholder="nouveau mot de passe">
+            </div>    
+        </div>
+        <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Prénom</label>
+            <div class="col-10">
+                <input type="text" id="name" name="name" class="form-control" value="{{data.name}}">
+            </div>    
+        </div>
+        <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Nom</label>
+            <div class="col-10">
+                <input type="text" id="second_name" name="second_name" class="form-control" value="{{data.second_name}}">
+            </div>    
+        </div>
+        <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Departement</label>
+            <div class="col-10">
+                <input type="number" id="department" name="department" class="form-control" value="{{data.department}}">
+            </div>    
+        </div>
+       <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Tel</label>
+            <div class="col-10">
+                <input type="tel" id="phone" name="phone" class="form-control" value="{{data.phone}}">
+            </div>    
+        </div>
+       <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Adresse</label>
+            <div class="col-10">
+                <input type="text" id="address" name="address" class="form-control" value="{{data.address}}">
+            </div>    
+        </div> 
+       <div class="form-group row">
+            <label for="example-search-input" class="col-2 col-form-label">Ville</label>
+            <div class="col-10">
+                <input type="text" id="city" name="city" class="form-control" value="{{data.city}}">
+            </div>    
+        </div>
+        <div class="form-groupe row">
+            <div class="col-12">
+                <input type="submit" class="btn btn-primary" value="Modifier">
+            </div>
+        </div>
+    	<input type="text" id="id" name="id" style="display:none" value="{{data.id}}">
+    </form>
+    {% for alert in app.session.flashbag.get('errors') %}
+        <p>{{alert}}</p>
+    {% endfor %}
+{% endblock %}

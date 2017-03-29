@@ -12,11 +12,25 @@ class Utils{
 		$this->app = $app;
 	}
 	
-	public function accessVerif(){
-		if (empty($this->app['session']->get('user'))) {
-			$this->app['session']->getFlashBag()->add('connectError','Veuillez vous connecter');
-			header('Location:'.\URL.'/admin');
-			exit();
+	public function accessVerif($users=[]){
+
+		if (empty($users)) return true;
+
+		$session = $this->app['session']->get('user');
+
+		$msg = 'Veuillez vous connecter';
+
+		//On verifie que le compte actuel possede le role approprié.
+		foreach ($users as $key => $value) {
+			if ($session['role'] == $value) {
+				return true; // Si oui on sort de la fonction
+			}
+
+			$msg = 'Vous n\'avez pas les droits d\'acceder a cette page. Connectez-vous avec les droits';
 		}
+		
+		$this->app['session']->getFlashBag()->add('connectError',$msg);
+		header('Location:'.\URL.'/admin');// Sinon on redirige
+		exit();
 	}	
 }

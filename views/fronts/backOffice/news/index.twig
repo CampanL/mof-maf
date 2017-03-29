@@ -1,0 +1,36 @@
+{% extends 'layouts/admin_master.twig' %}
+
+{% block content %}
+	<div class="content">
+		<a href="/admin/news/create">Ajouter</a>
+		<div class="row">
+			<div class="col-2"><strong>Titre</strong></div>
+			<div class="col-2"><strong>Résumé</strong></div>
+			<div class="col-2"><strong>Image</strong></div>
+			<div class="col-2"><strong>Publication</strong></div>
+
+		</div>
+		{% for news in data %}
+		    <div class="row">
+		    	<div class="col-2">
+		    		<p>{{news.title}}</p>
+		    	</div>
+		    	<div class="col-2">
+		    		<p>{{news.exerpt}}</p>
+		    	</div>
+		    	<div class="col-2">
+		    		<p>{{news.img}}</p>
+		    	</div>
+		    	<div class="col-2">
+		    		<p>{{news.published_at}}</p>
+		    	</div>
+		    	<div class="col-2">
+		    		<a href="/admin/news/edit/{{news.id}}">modifier</a>
+		    	</div>
+		    	<div class="col-2">
+		    		<a href="/admin/news/delete/{{news.id}}">supprimer</a>
+		    	</div>
+		    </div>
+		{% endfor %}
+	</div>
+{% endblock %}

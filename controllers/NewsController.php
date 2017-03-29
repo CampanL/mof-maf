@@ -2,15 +2,14 @@
 
 namespace Controllers;
 
-use Symfony\Component\HttpFoundation\Request;
 use Silex\Application as App;
+use Symfony\Component\HttpFoundation\Request;
 
-
-class AdminController extends Controllers{
+class NewsController extends Controllers{
 
 	public function __construct( App $app ){
 
-		parent::__construct($app,'admins');
+		parent::__construct($app,'news');
 
 		$this->access = ['admin'];
 	}
@@ -19,12 +18,17 @@ class AdminController extends Controllers{
 		$this->utils->accessVerif($this->access);
 
 		$request = $request->request->all();
+
+		move_uploaded_file($_FILES["img"]["tmp_name"], 'assets/images/'.$_FILES["img"]["name"]);
+
+		$request['img'] = '/assets/images/'.$_FILES["img"]["name"];
 		
-		if ($request["password"]) $request["password"] = sha1($request["password"]);
-		
+		$request['published_at'] = date("Y-m-d H:i:s");
+
 		$this->model->create($request);
 		
-		return $this->app->redirect('/admin/admins');
+		return $this->app->redirect('/'.'admin/'.$this->table);
+
 	}
 
 	public function update(Request $request){
@@ -32,18 +36,21 @@ class AdminController extends Controllers{
 
 		$request = $request->request->all();
 		
-		if ($request["password"]) $request["password"] = sha1($request["password"]);
-		
 		foreach ($request as $key => $value) {
 			if ($value == '') {
 				unset($request[$key]);
 			}
 		}
 
+		if ($_FILES["img"]["tmp_name"] != '') {
+			move_uploaded_file($_FILES["img"]["tmp_name"], 'assets/images/'.$_FILES["img"]["name"]);
+
+			$request['img'] = '/assets/images/'.$_FILES["img"]["name"];
+		}
+
 		$this->model->update($request);
 
 		$this->app['session']->getFlashBag()->add('alert', 'Utilisateur modifié');
-		return $this->app->redirect('/admin/admins');
+		return $this->app->redirect('/'.'admin/'.$this->table);
 	}
-
 }

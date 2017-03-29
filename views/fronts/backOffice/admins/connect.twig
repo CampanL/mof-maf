@@ -1,0 +1,43 @@
+{% extends 'layouts/master.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="offset-3 col-5">
+                <div class="row">
+                    <div class="col-12">
+                        {% for msg in app.session.flashbag.get('connectError') %}
+                           <p>{{msg}}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <form action="/admin/connect" method="post" class="container">
+                    <div class="form-group row">
+                        <label for="mail" class="col-3 col-form-label">Mail</label>
+                        <input type="email" id="mail" name="mail"  class="form-control col-9">
+                    </div>
+                    <div class="form-group row">
+                        <label for="password" class="col-3 col-form-label">Mot de passe</label>
+                        <input type="password" id="password" name="password"  class="form-control col-9">
+                    </div>
+                   <div class="form-group row">
+                        <input type="submit" class="btn btn-primary">
+                    </div>
+
+                </form>
+
+                {% for item in app.session.flashbag.get('errors') %}
+                    {% for msg in item %}
+                        <p>{{ msg }}</p>
+                    {% endfor %}
+                {% endfor %}
+
+                {% for msg in app.session.flashbag.get('not_found') %}
+                    <p>{{ msg }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

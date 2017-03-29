@@ -1,0 +1,58 @@
+{% extends 'layouts/admin_master.twig' %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+			    <form action="/admin/organizers/create" method="post"class="container">
+                    <div class="form-group row">
+                        <label for="mail" class="col-3 col-form-label">Mail</label>
+                        <input type="email" id="mail" name="mail"  class="form-control col-9">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-3 col-form-label">Mot de passe</label>
+                        <input type="password" id="password" name="password"  class="form-control col-9">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="name" class="col-3 col-form-label">Prénom</label>
+                        <input type="name" id="name" name="name"  class="form-control col-9">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="second_name" class="col-3 col-form-label">Nom</label>
+                        <input type="second_name" id="second_name" name="second_name"  class="form-control col-9">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="phone" class="col-3 col-form-label">Tel</label>
+                        <input type="tel" id="phone" name="phone"  class="form-control col-9">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="address" class="col-3 col-form-label">Adresse</label>
+                        <input type="text" id="address" name="address"  class="form-control col-9">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="city" class="col-3 col-form-label">Ville</label>
+                        <input type="text" id="city" name="city"  class="form-control col-9">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="department" class="col-3 col-form-label">Departement</label>
+                        <input type="number" id="department" name="department"  class="form-control col-9">
+                    </div>
+
+                   <div class="form-group row">
+                        <input type="submit" class="btn btn-primary">
+                    </div>
+			    </form>
+			    {% for alert in app.session.flashbag.get('errors') %}
+			        <p>{{alert}}</p>
+			    {% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

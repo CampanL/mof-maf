@@ -1,0 +1,45 @@
+{% extends 'layouts/admin_master.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/admin/admins/update" method="post"class="container">
+                    <div class="form-group row">
+                        <label for="mail" class="col-3 col-form-label">Mail</label>
+                        <input type="email" id="mail" name="mail"  class="form-control col-9" value="{{data.mail}}">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password" class="col-3 col-form-label">Mot de passe</label>
+                        <input type="password" id="password" name="password"  class="form-control col-9">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="name" class="col-3 col-form-label">Prénom</label>
+                        <input type="name" id="name" name="name"  class="form-control col-9" value="{{data.name}}">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="second_name" class="col-3 col-form-label">Nom</label>
+                        <input type="second_name" id="second_name" name="second_name"  class="form-control col-9" value="{{data.second_name}}">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="phone" class="col-3 col-form-label">Tel</label>
+                        <input type="tel" id="phone" name="phone"  class="form-control col-9" value="{{data.phone}}">
+                    </div>
+
+                    <input type="text" id="id" name="id" value="{{data.id}}" style="display:none">
+
+                   <div class="form-group row">
+                        <input type="submit" class="btn btn-primary">
+                    </div>
+                </form>
+                {% for alert in app.session.flashbag.get('errors') %}
+                    <p>{{alert}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
