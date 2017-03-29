@@ -2,22 +2,20 @@
 	padding: 0;
 	margin: 0;
 }
-
 body{
 	overflow-x: hidden;
 }
 
 header{
-	background-color: #ddd;
-	padding-bottom: 2%;
+	background-image: url(../images/bck_hearder.jpg);
+	background-repeat: no-repeat;
+	background-color: #34315C;
+	height: 250px;
 }
 
-h2{
-	margin: 5% 0%;
-	font-size: 2.5em;
+span
+{
 	font-weight: bold;
-	color: #34315c;	
-	text-transform: uppercase;
 }
 
 ul{
@@ -27,27 +25,27 @@ ul{
 li{
 	display: inline-block;
 }
-
-img{
-	max-width: 100%;
+button:hover
+{
+	cursor: pointer;
 }
-
-.logo{
-	width: 90px;
+.uppercase
+{
+	text-transform: uppercase;
 }
-
 .login_space{
 	text-transform: uppercase;
-	font-size: 0.7em;
+	font-weight: bold;
+	font-size: .8em;
 }
 
 .login_space ul{
-	background-color: white;
 	display: inline-block;
 	padding: 10px 20px;
 	box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+	background-color: #CE172B;
 }
 
 .login_space .border-left{
@@ -56,212 +54,718 @@ img{
 	height: 15px;
 	margin: 0px 15px;
 }
-
-nav{
-	margin-top: 15px;
+.login_space a
+{
+	color: #fff;
+	text-decoration: none;
 }
 
-nav li{
-	padding: 5px 15px;
+.nav li{
+	padding: 15px 55px;
+	font-size: .75em;
 	text-transform: uppercase;
 }
 
-nav li:hover{
-	background-color: red;
+.nav ul
+{
+	margin-bottom: 0px;
+}
+.nav a
+{
+	text-decoration: none;
+	color: #302953;
+	font-weight: bold;
+}
+.nav span
+{
+	color: #B50B0B;
+}
+.reseau-sociaux a, .reseau-sociaux p
+{
+	display: inline-block;
+}
+.reseau-sociaux img
+{
+	margin-left:30px;
+}
+.reseau-sociaux
+{
+	padding-top: 5%;
+	padding-left: 5%;
+	color: #f3f3f3;
+}
+.home
+{
+	background-color: #34315C;
 }
 
-.container-image, .container-image img{
-	width: 100%;
-}
 
-.container-image img{
-	height: 780px;
+.tester-experience
+{
+	margin-top:600px; 
 }
-
-.absolute-container{
-	width: 66.5vw;
+.absolute-div
+{
 	position: absolute;
-	top: 140vh;
-	left: 14vw;
+	height: 500px;
 	z-index: 3;
-	text-transform: uppercase;
 }
 
-.absolute-container div.row{
-	margin-bottom: 15px;
+.test-txt, .inscription
+{
+	padding: 30px 0px;
+}
+.test-txt
+{
+	color: #35315d;
+	background-color: #fbfbfb;
+	font-size: 1.5em;
+}
+.inscription
+{
+	background-image: url(../images/pattern_red.png);
+	padding: 30px 50px;
+	color: #fff;
 }
 
-.absolute-container .actu{
-	color: #34315c;
-	font-weight: bold;
-	background-color: white;
-	margin-top: -15%;
-	padding: 1% 4%;
+.white-bar
+{
+	width: 100px;
+	height:	4px;
+	background-color: #fff;
+	margin-bottom: 20px;
 }
-
-.tentez_lexperience .text,.tentez_lexperience .inscription{
-	padding: 25px 40px;
+.inscription-btn button
+{
+	border-radius: 5px;
+	text-align: left;
+	width: 250px;
+	padding: 10px 15px;
 }
-
-.tentez_lexperience .text{
- 	text-align: center;
- 	color: #34315c;
- 	background-color: white;
+.inscription-btn img
+{
+	margin-right: 30px;
 }
-
-.tentez_lexperience .text h3{
- 	font-size: 2.5em;
+.inscription-btn a
+{
+	color: #c81d25;
+	text-decoration: none;
 }
-
-
-.tentez_lexperience .inscription{
- 	background-color: #b91200;
- 	 color: white;
+.banner
+{
+	background-image: url(../images/maxresdefault.jpg);
+	background-size: cover;
+	height: 800px;
 }
-
-.tentez_lexperience .inscription h4{
-	font-weight: bold;
-	margin-bottom: 0;
+.actu
+{
+	margin-top: 80px;
+	color: #35315d;
 }
-
-.tentez_lexperience .inscription .trait{
-	background-color: white;
+.last-news
+{
+	margin-top: 120px;
+	height: 300px;
 }
-
-.tentez_lexperience p{
-	font-size: 1.3em;
+.news
+{	
+	background-color: #fbfbfb;
+	padding: 20px 30px;
 }
-
-.tentez_lexperience .description{
-	font-size: 0.7em;
+.bg-actu
+{
+	background-image: url(../images/img_medaille.png);
+	background-position-x:150px;
+	background-repeat: no-repeat;
+	padding-top: 400px;
+	padding-bottom: 150px;
+	background-color: #f3f3f3;
 }
-
-.description-news{
+.blue-bar
+{
+	height: 4px;
+	width: 50px;
+	background-color: #35315d;
+	margin-bottom: 20px;
+}
+.button
+{
+	border-radius: 5px;
+	background-color: #35315d;
+	border-color: #35315d;
+	padding-top: 5px;
+	width: 200px;
+	height: 40px;
 	position: relative;
-	top: -100px;
-	left: 155px;
-	background-color: white;
-	padding: 5%;
-	color: #34315c;
+	top: 40px;
+	left: 40px;
+	border: solid 2px #35315d;
+}
+.button a
+{
+
+	color: #fbfbfb;
+	text-decoration: none;
 }
 
-.description-news .trait{
-	background-color: #34315c;
-}
-
-.description-news h3{
+.voir-actu, .savoir-plus
+{
+	margin-top: 100px;
+	width: 30%;
+	margin-left: 35%;
+	padding: 15px;
 	font-weight: bold;
+}
+.savoir-plus
+{
+	background-color: #fbfbfb
+
+}
+.voir-actu
+{
+	background-color: #fff;
+}
+.voir-actu a
+{
+	color: #35315b;
+	text-decoration: none;
+}
+.savoir-plus a
+{
+	color: #35315d;
+	text-decoration: none;
+}
+.participer
+{
+	margin-top: 250px;
+	color: #fbfbfb;
+}
+.participer h1
+{
+	margin-bottom: 50px;
+}
+.bg-participer
+{
+	background-image: url(../images/bck_participation.jpg);
+	height: 800px;
+}
+.responsable
+{
+	color: #35315d;
+	margin-top: 100px;
+}
+.responsable h3
+{
+	font-weight: bold;
+}
+.responsable p, .responsable input, .responsable select, .responsable button, .responsable img
+{
+	display: inline-block;
+}
+
+.responsable input, .responsable select, .responsable button
+{
+	text-align: center;
+	width: 300px;
+	height:40px;
+}
+.responsable img, .responsable p
+{
+	margin: 0px 10px;
+}
+.responsable button
+{
+	border-radius: 5px;
+	background-color: #c81d25;
+	border-style: none;
+	border-color: #c81d25;
+	font-weight: bold;
+	color: #fbfbfb;
+}
+.bg-responsable
+{
+	height: 200px;
+	background-image: url(../images/pattern_white.png);
+}
+.concours-img
+{
+	margin-top: 150px;
+}
+.concours-img h1
+{
+	color: #35315d;
+	margin-bottom: 50px;
+}
+.concours-img img
+{
+	width:20%;
+}
+.bg-concours-img
+{
+	height: 750px;
+	background-color: #f3f3f3;
+}
+.concours-img button
+{
+	border-radius: 5px;
+	margin-left: 70%;
+	margin-top: 20px;
+	border-style: none;
+	padding: 15px 30px;
+	background-color: #fff;
+}
+.concours-img a
+{
+	color: #35315d;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.partenair
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.inscription-banner
+{
+	background-image: url(../images/maxresdefault.jpg);
+	background-size: cover;
+	height: 800px;
+}
+.long-red-bar
+{
+	height: 5px;
+	background-color: #c81d25;
+}
+.inscription-arian
+{
+	margin-top: 830px;
+}
+.arian
+{
 	font-size: 1.2em;
 }
-
-.description-news p{
-	font-size: 0.8em;
-	text-transform: none;
-	text-align: left;
+.arian a, .arian p
+{
+	color: #35315d;
 }
-
-.description-news span{
-	color: rgba(155,155,155,0.8);
+.bg-arian
+{
+	height: 80px;
+	background-color: #fff;
 }
-
-.description-news a.btn{
-	color: white;
-	font-weight: bold;
-	width: 80%;
-	margin-left: 10%;
-	background-color: #34315c;
+.inscription-simple
+{
+	color: #35315d;
+	background-color: #FFF;
 }
-
-.second-bg{
-	background-color: #ddd;
-	height: 115vh;
-	width: 100%;
+.inscription-simple .title
+{
+	font-size: 2.5em;
 }
-
-.pourquoi-participer{
-	background-image: url("../images/maxresdefault.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	color: white;
+.inscription-txt
+{
+	margin:  50px 0px;
 }
-
-.pourquoi-participer h2{
-	color: white;
-}
-
-.pourquoi-participer .filtre{
-	background-color: rgba(63,56,90,0.7);
-}
-
-.pourquoi-participer a.btn{
-	color: #34315c;
-	font-weight: bold;
-	background-color: white;
-	padding: 0.5% 5%;
-	text-transform: uppercase;
-	margin: 3% 0;
-}
-.btn-style{
-	background-color: white;
-	color: #b81202;
-	width: 100%;
-}
-
-.rechercher{
-	background-color: #ddd;
-	padding: 3% 0;
-}
-
-.rechercher form{
-	margin: 1% 0;
-}
-
-.rechercher form>*{
-	display: inline-block;
-	margin-right: 3%;
-}
-
-.trait{
-	width: 20px;
-	height: 2px;
+.icone img
+{
 	margin-bottom: 10px;
 }
-
-.rechercher {
-	color: #34315c;
+.profil, .dots, .formation, .employeur
+{
+	display: inline-block;
 }
-
-.rechercher h3{
-	text-transform: uppercase;
+.profil p, .formation p, .employeur p
+{
+	font-size: 1.1em;
+}
+.icone .dots
+{
+	width: 20%;
+	position: relative;
+	top: -100px;
+}
+.grey-dot
+{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 0px 10px;
+	border-radius: 50%;
+	background-color: #9a98ae;
+}
+.step
+{
+	width: 150px;
+}
+.inscription-button
+{
+	text-decoration: none;
+	height: 70px;
+	padding-top: 15px; 
+	background-image: url(../images/pattern_red.png);
+	color: #f3f3f3;
+	margin-bottom: 50px;
+}
+.inscription-button:hover
+{
+	color: #f3f3f3;
+}
+.inscription-button img
+{
+	margin: 0px 20px 0px -30px;
+}
+.inscription-button h3, .inscription-button img
+{
+	display: inline-block;
+}
+.bg-inscription-simple
+{
+	background-image: url(../images/img_polygone_01.png);
+	background-position: right;
+	background-repeat: no-repeat;
+	background-position-y: -10px;
+	height: 650px;
+	background-color: #f3f3f3;
+}
+.deroulement
+{
+	color: #f3f3f3;
+	margin-top: 250px;
+}
+.deroulement h2
+{
+	margin-bottom: 50px;
+	font-weight: bolder;
+}
+.deroulement p
+{
+	line-height: 2em;
+}
+.bg-deroulement
+{
+	background-image: url(../images/img_bck_inscription.jpg);
+	height: 1000px;
+	background-size:cover;
+}
+.dl-button
+{
+	margin-top: 50px;
+	font-size: 1.3em;
+	color: #35315d;
+	height: 50px;
+	padding-top: 10px;
+	border-radius: 5px;
 	font-weight: bold;
+	background-color: #f3f3f3;
 }
-
-.en-images{
-	background-color: #ddd;
+.dl-button:hover
+{
+	color: #35315d;
+	text-decoration: none;
 }
-
-.en-images .btn{
-	text-transform: uppercase;
-	color:#34315c;
-	border: 1px solid #34315c;
-	padding: 1% 2%;
-	margin: 2% 0 4% 0;
-	background-color: white;
+.steps
+{
+	margin-top: 300px;
+	color: #35315d;
 }
-
-.partenaire h3{
-	text-transform: uppercase;
-	color: #34315c;
-	margin: 2% 5%;
+.steps h1
+{
+	margin-bottom: 100px;
+}
+.all-steps
+{
+	margin-bottom: 50px;
+}
+.regional, .departemental, .national, .dots
+{
+	display: inline-block;
+}
+.regional, .departemental, .national
+{
+	width: 130px;
+}
+.all-steps .dots
+{
+	position: relative;
+	top: -40px;
+}
+.blue-number
+{
+	width: 50px;
+	height: 50px;
+	background-color: #35315d;
+	border-radius: 50%;
+	color: #f3f3f3;
+	padding-top: 10px;
+	font-size:1.3em;
+	position: relative;
+	left: 30%;
+}
+.bg-steps
+{
+	height: 400px;
+	box-shadow: 0px 5px 10px #ddd;
+}
+.medaille
+{
+	color: #35315d;
+	padding-top: 50px;
+}
+.medailles h1
+{
+	font-weight: bolder;
+}
+.medaille img, .medaille-txt
+{
+	display: inline-block;
+}
+.medaille img
+{
+	position: relative;
+	top: -40px;
+	margin-right: 20px;
+}
+.bg-medaille
+{
+	background-color: #f3f3f3;
+	background-image: url(../images/img_medaille.png);
+	background-repeat: no-repeat;
+	background-position-x: 1100px;
+	height: 800px;
+}
+.palmares-button
+{
+	margin-top: 100px;
+	font-size: 1.3em;
+	padding: 20px 15px;
+	border-radius: 5px;
 	font-weight: bold;
+	background-color: #c81d25;
+	color: #f3f3f3;
 }
-
+.palmares-button:hover
+{
+	text-decoration: none;
+	color: #f3f3f3;
+}
+.bienvenue
+{
+	color: #f3f3f3;
+	margin-top: 40px;
+}
+.bg-bienvenue
+{
+	height: 150px;
+	background-image: url(../images/pattern_blue.png);
+}
+.register-arian
+{
+	margin-top: 60px;
+}
+.formulaire
+{
+	background-color: #fff;
+	padding: 20px;
+}
+.commencer
+{
+	color: #35315d;
+}
+.commencer button
+{
+	width: 150px;
+	padding: 10px 0px;
+	font-weight: bold;
+	border-radius: 10px;
+	border: 2px solid #35315d;
+}
+.back
+{
+	color: #35315d;
+	background-color: rgba(0,0,0,0);
+	margin:0% 3% 5% 32%;
+}
+.start
+{
+	background-color: #35315d;
+	color: #f3f3f3;	
+}
+.bg-formulaire
+{
+	background-color: #f3f3f3;
+	background-image: url(../images/img_polygon_top.jpg);
+	background-position-x: 100%;
+	background-repeat: no-repeat; 
+	height: 1200px;
+}
+.mentions
+{
+	font-size: 0.75em;
+	color: #35315d;
+}
+.mentions a
+{
+	color: #35315d;
+}
+.mes-info, .etablissement-formation, .contrat-apprentissage, .comfirmation
+{
+	border-radius: 10px;
+	padding: 15px 10px;
+	color: #fff;
+}
+.mes-info h3, .etablissement-formation h3, .contrat-apprentissage h3, .comfirmation h3, .white-step
+{
+	display: inline-block;
+}
+.step1, .step2, .step3, .step4
+{
+	margin-bottom: 2%;
+}
+.step-title
+{
+	border-radius: 10px;
+}
+.white-step
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+.formulaire
+{
+	margin-top: 45px;
+}
+.formulaire label
+{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #35315d;
+}
+.step1 input, .step2 input, .step3 input
+{
+	margin-bottom: 3.5%;
+	width: 100%;
+	border:none;
+	border-bottom: 2px solid #35315d;
+	outline: none;
+}
+.step4 input
+{
+	margin-top: 10px;
+}
+.annexe
+{
+	color: #35315d;
+	margin-top: 3%;
+}
+.cancel
+{
+	background-color: rgba(0,0,0,0);
+	border: 2px solid #35315d;
+	border-radius: 10px;
+	padding: 8px 15px;
+	margin-left: 60%;
+	margin-right: 3%;
+}
+.continue
+{
+	padding: 10px 15px;
+	border-radius: 10px;
+	background-color: #35315d;
+	font-weight: bold;
+	color: #f3f3f3;
+	border: none;
+}
+.precedent .continue
+{
+	display: inline-block;
+}
+.pdf
+{
+	border: 2px solid #35315d;
+	border-radius: 15px;
+	padding: 0px;
+	margin-bottom: 0px;
+	overflow: hidden;
+}
+.finished
+{
+	color: #35315d;
+	margin-bottom: 50px;
+}
+.finished button
+{
+	padding: 10px 0px;
+	width: 50%;
+	margin-left: 25%;
+	border-radius: 10px;
+	background-color: #35315d;
+	color: #f3f3f3;
+	border: none;
+	border: 2px solid #35315d;
+}
 footer{
 	background-color: #34315c;
 	color: white;
-	padding-top: 1%
+	padding-top: 2%
 }
-
+.todo .title
+{
+	background-color: #7d7a96;
+}
+.todo .step
+{
+	color: #7d7a96;
+}
+.todo form
+{
+	display: none;
+}
+.doing .title
+{
+	background-color: #47426A;
+}
+.doing .step
+{
+	color: #47426A;
+}
+.doing form
+{
+	display: block;	
+}
+.done .title
+{
+	background-color: #4FC32C;
+}
+.done .step
+{
+	color: #4FC32C;
+}
+.done form
+{
+	display: none;
+}
+.red-bar , .contact
+{
+	display: inline-block;
+}
+.red-bar
+{
+	height: 100px;
+	width: 4px;
+	background-color: #c81d25;
+}
+.contact li
+{
+	display: block;
+}
+.contact a
+{
+	color: #fff;
+}
 a.btn{
 	border-radius: 0;
 }
@@ -269,10 +773,10 @@ a.btn{
 .bold{
 	font-weight: bold;
 }
-
-.m10bpc{
-	margin-bottom: 10%;
-}
 .ls31{
 	letter-spacing: -0.31em;
+}
+.grey
+{
+	color: #dcdcdc;
 }

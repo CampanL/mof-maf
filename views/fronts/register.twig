@@ -1,0 +1,191 @@
+{% extends 'layouts/master.twig' %}
+{% block content %}
+	<div class="container-fluid offset-2 col-8 absolute-div">
+		<div class="bienvenue">
+			<h3 class="uppercase"><span>Bienvenue,</span><br/>
+			dans le formulaire de préinscription</h3>
+		</div>
+		<div class="register-arian arian uppercase">
+			<p><a href="">accueil</a> > <a href="/inscription">inscription</a> > <span><a href="">formulaire</a></span></p>
+		</div>
+		<div class="formulaire">
+			<div class="commencer">
+				<h3 class="uppercase text-center">commençons<br/>
+				voltre préinscription en ligne</h3>
+				<p>Avant de commencer, munissez-vous des informations concernant <span>votre établissement de formation</span> et <span>votre contrat d'apprentissage</span>. Préparez également un scan recto/verso de <span>votre carte d'identité </span>et de <span>votre certificat de scolarité</span>.<br/>
+				(format requis: pdf,docx ou jpg)</p>
+				<p>Une fois tout ces éléments réunis, cliquez sur "<span>commencer</span>"</p>
+				<a href="/"><button class="uppercase back">Retour</button></a>
+				<button type="submit" class="uppercase start">commencer</button>
+			</div>
+			<div class="step1 done">
+				<div class="mes-info title">
+					<div class="white-step step text-center"><h3>1</h3></div>
+					<h3 class="uppercase">Mes informations</h3>
+				</div>
+				<div class="formulaire">
+					<form method="post">
+						<div class="row">
+							<div class="col-2">
+								<label for="name">Nom: </label><br/>
+								<label for="prenom">Prénom: </label><br/>
+								<label for="naissance">Né(e) le: </label><br/>
+								<label for="metier">Métier: </label>
+								<label for="mail">Adresse email: </label><br/>
+							</div>
+							<div class="col-4">
+								<input id="name" type="text" name="name" placeholder="Votre nom">
+								<input id="prenom" type="text" name="prenom" placeholder="Votre prénom">
+								<input id="naissance" type="text" name=" naissance" max="2017-01-01" placeholder="aaaa-mm-jj">
+								<input id="metier" type="text" name="metier" placeholder="Votre métier">
+								<input id="mail" type="email" name="mail" placeholder="Votre adresse email">
+							</div>
+							<div class="col-2">
+							<label id="" for="adresse">Adresse: </label><br/>
+							<label id="" for="code-postal">Code postal: </label><br/>
+							<label id="" for="ville">Ville: </label><br/>
+							<label id="" for="departement">Département: </label><br/>
+							</div>
+							<div class="col-4">
+								<input type="text" name="adresse" id="adresse" placeholder="Votre adresse">
+								<input type="text" name="code-postal" id="code-postal" placeholder="Votre code postal">
+								<input type="text" name="ville" id="ville" placeholder="Votre ville">
+								<input type="number" name="departement" id="departement" placeholder="Votre département" min="1" max="95">
+							</div>
+						</div>
+						<div class="row annexe text-center">
+							<h3 class="uppercase col-12 text-left">Document annexes</h3>
+							<div class="col-3">
+							<label for="carte">Carte d'identité<br/>
+							recto/verso</label>
+							</div>
+							<div class="col-3">
+								<input type="file" name="carte" id="carte" accept=".pdf, .jpg, .jpeg">
+							</div>
+							<div class="col-3">
+								<label for="certificat">Certificat de<br/>scolarité</label>
+							</div>
+							<div class="col-3">
+								<input type="file" name="certificat" id="certificat" accept=".pdf, .jpg">
+							</div>
+						</div>
+						<a href="/"><button class="uppercase cancel">annuler</button></a>	
+						<button type="submit" class="uppercase continue">poursuivre</button>
+					</form>
+				</div>
+			</div>
+			<div class="step2 doing">
+				<div class="etablissement-formation title">
+					<div class="white-step step text-center"><h3>2</h3></div>
+					<h3 class="uppercase">établissement de formation</h3>
+				</div>
+				<div class="formulaire">
+					<form method="post">
+						<div class="row">
+							<div class="col-2">
+								<label for="etablissement">Établissement: </label><br/>
+								<label for="code-postal-formation">Code postal: </label><br/>
+								<label for="telephone">Téléphone</label><br/>
+								<label for="formateur">Formateur</label><br/>
+							</div>
+							<div class="col-4">
+								<input type="text" name="etablissmeent" id="etablissmeent" placeholder="Nom de l'établissement">
+								<input type="text" name="code-postal-formation" id="code-postal-formation" placeholder="Code postal de l'établissement">
+								<input type="text" name="telephone" id="telephone" placeholder="Téléphone de l'établissement">
+								<input type="text" name="formateur" id="formateur" placeholder="Nom de votre formateur">
+							</div>
+							<div class="col-2">
+								<label for="adresse-formation">Adresse: </label><br/>
+								<label for="ville-formation">Ville: </label><br/>
+								<label for="mail-formation">Email</label><br/>
+							</div>
+							<div class="col-4">
+								<input type="text" name="adresse-formation" id="adresse-formation" placeholder="Adresse de l'établissement">
+								<input type="text" name="ville-formation" id="ville-formation" placeholder="Ville de l'établissement">
+								<input type="email" name="mail-formation" id="mail-formation" placeholder="Email de l'établissement">
+							</div>
+						</div>
+						<a href="/"><button class="uppercase cancel">précédent</button></a>	
+						<button type="submit" class="uppercase continue">poursuivre</button>
+					</form>
+				</div>
+			</div>
+			<div class="step3 todo">
+				<div class="contrat-apprentissage title">
+					<div class="white-step step text-center"><h3>3</h3></div>
+					<h3 class="uppercase">contrat d'apprentissage</h3>
+				</div>
+				<div class="formulaire">
+					<form method="post">
+						<div class="row">
+							<div class="col-2">
+								<label for="etablissement-emploie">Établissement: </label><br/>
+								<label for="code-postal-employeur">Code postal: </label><br/>
+								<label for="telephone-employeur">Téléphone</label><br/>
+								<label for="employeur">Employeur</label><br/>
+							</div>
+							<div class="col-4">
+								<input type="text" name="etablissmeent-emploie" id="etablissmeent-emploie" placeholder="Nom de l'employeur">
+								<input type="text" name="code-postal-emploie" id="code-postal-emploie" placeholder="Code postal de l'employeur">
+								<input type="text" name="telephone-emploi" id="telephone-emploi" placeholder="Téléphone de votre employeur">
+								<input type="text" name="employeur" id="employeur" placeholder="Nom de votre employeur">
+							</div>
+							<div class="col-2">
+								<label for="adresse-emploie">Adresse: </label><br/>
+								<label for="ville-emploie">Ville: </label><br/>
+								<label for="mail-emploie">Email</label><br/>
+							</div>
+							<div class="col-4">
+								<input type="text" name="adresse-emploie" id="adresse-emploie" placeholder="Adresse de l'employeur">
+								<input type="text" name="ville-emploie" id="ville-emploie" placeholder="Ville de l'employeur">
+								<input type="email" name="mail-emploie" id="mail-emploie" placeholder="Email de l'employeur">
+							</div>
+						</div>
+						<a href="/"><button class="uppercase cancel">précédent</button></a>	
+						<button type="submit" class="uppercase continue">poursuivre</button>
+					</form>
+
+				</div>
+			</div>
+			<div class="step4 todo">
+				<div class="comfirmation title">
+					<div class="white-step step text-center"><h3>4</h3></div>
+					<h3 class="uppercase">réglement et confirmation</h3>
+				</div>
+				<div class="formulaire">
+					<form method="post" >
+						<div class="row">
+							<div class="col-8 offset-2 pdf">
+								<embed src="assets/pdf/reglement_du_concours_2017.pdf" width="100%"  height="600rem"/>
+							</div>
+							<div class="col-8 offset-2">
+									<input class="form-check-input" type="radio" name="prise-en-conscience" id="prise-en-conscience" value="">
+									<label>j'ai pris connaissance et j'accepte le réglement général du concour maf</label>
+								<button type="submit"></button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="finished">
+				<div class="col-8 offset-2">
+					<h1 class="uppercase text-center">Félicitations</h1>
+					<p><span>Votre demande d'inscription au concours du meilleur apprentis de france a bien été prise en compte</span></p>
+					<p>Vous allez recevoir sous peu un email de comfirmation contenant vos <span>identifiants de connexion</span> à <span>votre compte de candidature</span>. La validation de votre inscription au concours sera effectué très prochainement par le président de votre département. Toutes les informations concernants le sujet des épreuves vous seront également communiquées par email. Elles seront également disponibles sur notre site et dans votre espace personnel.</p>
+					<p>Nous vous remercions pour l'intêret que vous portez à notre concours et nous souhaitons la meilleure réussite possible.</p>
+					<p><span>La SnMOF.</span></p>
+					<a href="/"><button class="uppercase">Retourner sur le site</button></a> 
+				</div>
+			</div>
+			<div class="mentions">
+				<p>Les informations fournies par les participants sous leur responsabilité, devront être exactes, licites et ne pas nuire aux intérêts des tiers. Leur publication peut faire l’objet d’une procédure de validation en particulier pour la qualité de Meilleur Ouvrier de France où l’usage abusif du Titre est passible de poursuites. Les informations recueillies sont tenues strictement confidentielles et sont destinées à l’usage exclusif des services de la SnMOF. Pour toute information sur la protection des données personnelles, vous pouvez consulter le site de la Commission Informatique et Liberté <span><a href="http://www.cnil.fr">http://www.cnil.fr</a>.</span> Les participants ont à tout moment la possibilité d’exercer leurs droits d’accès, de modification, de rectification et de suppression des données qui les concernent (Art. 34 de la Loi Informatique & Libertés du 6 janvier 1978). La SnMOF s’engage à donner suite à toute demande dans les plus brefs délais. La Société nationale des Meilleurs Ouvriers de France est susceptible de transmettre votre adresse électronique afin de faciliter tout contact avec un adhérent ou pour tout autre demande. en cas d’opposition merci de lors de la saisie des formulaires d’inscription de cocher la case disponible sur le formulaire.</p>
+			</div>
+		</div>
+	</div>
+	<div class="background">
+		<div class="bg-bienvenue"></div>
+		<div class="long-red-bar"></div>
+		<div class="bg-arian"></div>
+		<div class="bg-formulaire"></div>
+	</div>
+{% endblock %}

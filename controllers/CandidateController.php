@@ -20,7 +20,7 @@ class CandidateController extends Controllers{
 	public function create(){
 		$this->utils->accessVerif();
 
-		return $this->app['twig']->render('fronts/registrationForm.twig');
+		return $this->app['twig']->render('fronts/register.twig');
 	}
 
 	public function save(Request $request){

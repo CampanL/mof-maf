@@ -11,9 +11,9 @@
 		
 		<header class="container-fluid">
 			<div class="row"> <!-- espace de connection -->
-				<div class="col-11 text-right login_space">
+				<div class="col-10 text-right login_space">
 					<ul>
-						<li><a href="">Espace administrateur</a></li>
+						<li><a href="/organizer">Espace organisateur</a></li>
 						<li class="border-left"></li>
 						<li><a href="">Espace candidat</a></li>
 					</ul>
@@ -21,33 +21,75 @@
 			</div> <!-- fin espace de connection -->
 			
 			<div class="row"><!-- Logo et reseau -->
-				<div class="offset-4 col-2">
-					<a href="/" class="navbar-brand">
-						<img src="/assets/images/logo.jpeg" alt="Logo MAF" class="logo">
+
+				<div class="offset-2 col-2">
+					<a href="./" class="navbar-brand">
+						<img src="/assets/images/img_logoMAF.png" alt="Logo MAF" class="logo">
 					</a>
+				</div>
+				<div class="offset-2 col-4 reseau-sociaux">
+					<p class="uppercase">retrouvez nous aussi sur:</p>
+					<a href="./"><img src="/assets/images/ico_youtube.png"></a>
+					<a href="./"><img src="/assets/images/ico_facebook.png"></a>
+					<a href="./"><img src="/assets/images/ico_instagram.png"></a>
 				</div>
 			</div><!-- fin logo et connection -->
 		</header>
 
-		<nav class="container-fluid">
-			<div class="row">
-				<ul class="offset-2 col-10">
-					<li><a href="/">home</a></li>
-					<li><a href="/actualite">actualité</a></li>
-					<li><a href="/metier_represente">métiers représenés</a></li>
-					<li><a href="/delegues">les délégués</a></li>
-					<li><a href="/candidate/create">inscription</a></li>
-					<li><a href="/palmares">palmares</a></li>
-					<li><a href="/media">media</a></li>
-					<li><a href="/contact">contact</a></li>
-				</ul>
-			</div>
-		</nav>
+		<div class="container-fluid nav">
+			<ul class="offset-1 col-10 text-center">
+				<li class="home"><a href="/"><img src="/assets/images/ico_home.png"></a></li>
+				<li><a href="./actualite">actualité</a></li>
+				<li><a href="./metier_represente">métiers représenés</a></li>
+				<li><a href="./delegues">les délégués</a></li>
+				<li><a href="./candidate/create" class="inscription-nav"><span>inscription</span></a></li>
+				<li><a href="./palmares">palmares</a></li>
+			</ul>
+		</div>
 
 		{%block content%}
 			
 		{% endblock %}
-
+		<!-- footer -->
+		<div class="partenair col-8 offset-2">
+			<img src="/assets/images/logo_agefa.jpg">
+			<img src="/assets/images/logo_eyfondation.jpg">
+			<img src="/assets/images/logo_fondationgarance.jpg">
+			<img src="/assets/images/logo_manpower.jpg">
+			<img src="/assets/images/logo_nespresso.jpg">
+			<img src="/assets/images/logo_rivalis.jpg">
+			<img src="/assets/images/logo_societegenerale.jpg">
+		</div>
+		<footer>
+			<div class="row">
+				<div class="offset-2 col-3">
+					<p><span>Concours organisé par la Société national des Meilleurs Ouvrillers de France</span></p>
+					<p>16 rue Saint-Nicolas<br/>
+					75012 PARIS</p>
+				</div>
+				<div class="col-3">
+					<p><span>secretaria@mof.fr<br/>
+					01 43 42 33 02</span></p>
+					<p>(du lundi au vendredi de 9h30 à 12h30 et de 13h30 à 17h, 
+					saufe les mardis et jeudis matin)</p>
+				</div>
+				<div class="col-4">
+					<div class="red-bar">
+					</div>
+					<ul class="contact">
+						<li><span><a href="./">gallerie</a></span></li>
+						<li><span><a href="./">plan du site</a></span></li>
+						<li><span><a href="./">mention légales</a></span></li>
+						<li><span><a href="./">contact</a></span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 text-center">
+					<p>Concours MAF 1985 - 2017</p>
+				</div>
+			</div>
+		</footer>
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>

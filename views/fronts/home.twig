@@ -1,194 +1,145 @@
 {% extends 'layouts/master.twig' %}
 
 {% block content %}
-	<div class="container-image">
-		<img src="assets/images/maxresdefault.jpg" alt="un ouvrier a la tache">
-	</div>
-
-	<div class="second-bg"></div>
-
-	<div class="absolute-container">
-		<div class="row">
-			<div class="tentez_lexperience">
-				<div class="row">
-					<div class="col-7 text">
-						<div class="row">
-							<div class="col-12">
-								<h4>Tentez l'expérience,</h4>
-								<h4>Devenez un des meilleurs</h4>
-								<h4>Apprentis de france</h4>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-4"></div>
-							<div class="col-4"></div>
-							<div class="col-4"></div>
-						</div>
-
-					</div>
-					<div class="col-5 inscription">
-						<div class="row">
-							<div class="col-12">
-								<h4>Inscription</h4>
-								<p>Au concours</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12">
-								<div class="trait"></div>				
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12">
-								<p class="description">Inscrivez-vous en ligne en toute simplicité pour pouvoir participer au concours du <span>Meilleur Apprentis de France</span>. Tout se passe directement sur notre site internet pour faciliter les inscriptions.</p>
-								<a href="/inscription" class="btn btn-style">je m'inscris</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-12 text-center">
-				<h2>l'actualité</h2>
-			</div>
-		</div>
-
-		<div class="row">
-			{% for index,new in news %}
-				{% if index>0 %}
-					<div class="col-4 offset-2">
-				{% else %}
+	<div class="container-fluid offset-2 col-8 absolute-div">
+		<div class="row tester-experience">
+			<div class="col-8 test-txt text-center uppercase">
+				<p>
+					tentez l'expérience,<br/>
+					devenez un <span>des meilleurs<br/>
+					apprentis de france</span>
+				</p>
+				<div class="row col-10 offset-1">
 					<div class="col-4">
-				{% endif %}
-					<img src="assets/images/maxresdefault.jpg">
-					<div class="description-news">
-						<p><span>{{new.published_at}}</span></p>
-						<h3>{{new.title}}</h3>
-						<div class="trait"></div>
-						<p>{{new.exerpt}}</p>
-						<a href="/actualite/single?id={{new.id}}" class="btn">Lire la suite</a>
+						<img src="assets/images/ico_candidats.png">
+						<p>
+							<span>+6000</span><br/>
+							candidats
+						</p>
 					</div>
-				</div>
-			{% endfor %}
-		</div>
-
-		<div class="row">
-			<div class="col-12 text-center">
-				<a href="/actualite" class="btn actu">voir toutes les actus</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="pourquoi-participer">
-		<div class="filtre">
-			<div class="row">
-				<div class="col-12 text-center">
-					<div class="titre">
-						<h2>Pourquoi participer <br/>au concours ?</h2>
+					<div class="col-4">
+						<img src="assets/images/ico_metiers.png">
+						<p>
+							<span>+90</span><br/>
+							métiers
+						</p>
+					</div>
+					<div class="col-4">
+						<img src="assets/images/ico_medaille.png">
+						<p>
+							<span>+881</span><br/>
+							médaillés
+						</p>
 					</div>
 				</div>
 			</div>
+			<div class="col-4 inscription">
+				<div>
+					<p class="uppercase">
+						<span>inscription</span><br/>
+						concours
+					</p>
+				</div>
+				<div class="white-bar">
+				</div>
+				<div>
+					<p>Inscrivez vous en ligne en toute simplicité pour pouvoir participer au concour du <span>Meilleurs Apprentis de France</span>. Tout se passe directement sur notre site internet pour faciliter les inscription.</p>
+				</div>
+				<div class="text-center inscription-btn">
+					<button><a href="./inscription" class="uppercase"><img src="assets/images/ico_inscription.png"> <span>Je m'inscris</span></a></button>
+				</div>
+			</div>
+		</div>
+		<div class="actu">
+			<h1 class="uppercase text-center">l'actualité</h1>
+			<div class="row last-news">
+				{% for actu in news %}
+					<div class="col-4 offset-2 news">
+						<p>	
+							<span class="grey">{{actu.published_at}}</span><br/>
+							<span class="uppercase">{{actu.title}}</span>
+							<div class="blue-bar">
+							</div>
+							{{actu.exerpt}}
+						</p>
+						<div class="text-center">
+							<div class="text-center button"><a href="./" class="uppercase">Lire la suite</a></div>
+						</div>
+						</div>
+				{% endfor %}
+
+			</div>
+			<div class="text-center voir-actu uppercase">
+				<a href="./">Voir toutes les actus</a>
+			</div>
+		</div>
+		<div class="participer">
+			<h1 class="text-center uppercase">pourquoi participer<br/>au concours?</h1>
 			<div class="row">
-				<div class="col-4 offset-2">
-					<p class="bold m10bpc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quibusdam corporis sit voluptas quidem quis delectus numquam nam blanditiis illo, ipsam odio dolore distinctio sint eligendi esse impedit excepturi rem.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde molestiae, velit et! Harum alias magni voluptas soluta, voluptate fuga at facilis autem sapiente. Sunt, fuga nam eaque commodi laboriosam!</p>
+				<div class="col-6">
+					<p><span>Ce concours a pour objectif de participer à la promotion de La Voie professionnelle Sous status scolaire ou sous contrat d'apprentissage.</span></p>
+					<p>
+					Il permet également aux apprentis et élçves de développer leir goût du travail bien fait, d'affirmer leur personnalité, leur passio, leur esprit d'initiative, de progresser dans leur compétences pratique, d'obtenir la juste récompense de leur effort et de témoigner avec fierté aux yeux de tous de l'efficience de leur formation aux métiers manuels.</p>
 				</div>
-				<div class="col-4 offset-1">
-					<p class="bold m10bpc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quibusdam corporis sit voluptas quidem quis delectus numquam nam blanditiis illo, ipsam odio dolore distinctio sint eligendi esse impedit excepturi rem.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat unde molestiae, velit et! Harum alias magni voluptas soluta, voluptate fuga at facilis autem sapiente. Sunt, fuga nam eaque commodi laboriosam!</p>
+				<div class="col-6">
+				<p><span>De nombreux jeunes nous ont témoignés après le concours que la recherche d'un emploi ou d'une formation qualifiante était plus facilement accessible.</span></p>
+				<p>En effet, c'est un gage de qualification et d'accès à l'emploi. Ce concours à l'ambition de détécter les jeunes talents ayant de réelles compétences professionelles et de leur permettre une meilleure insertion dans le monde professionnel! Le concours a un véritable impact sur l'employabilité des jeunes.</p>
 				</div>
+			</div>
+			<div class="savoir-plus text-center uppercase"><a href="">En savoir plus</a></div>
+		</div>
+		<div class="responsable text-center">
+			<h3 class="uppercase">Trouver un responsable du concours pour s'informer</h3>
+			<div class="search">
+			<input type="text" name="name" placeholder="Nom">
+			<p class="uppercase">ou</p>
+			<select>
+				<option value="none" selected>Choisissez un département</option>
+			</select>
+			<img src="assets/images/ico_search.png">
+			<button type="submit" class="uppercase">Lancer la recherche</button>
+			</div>
+		</div>
+		<div class="concours-img">
+			<h1 class="uppercase text-center">Le concours en image</h1>
+			<div class="row">
+				<img src="assets/images/img_gallerie01.jpg">
+				<img src="assets/images/img_gallerie02.jpg">
+				<img src="assets/images/img_gallerie03.jpg">
+				<img src="assets/images/img_gallerie04.jpg">
+				<img src="assets/images/img_gallerie05.jpg">
 			</div>
 			<div class="row">
-				<div class="col-12 text-center">
-					<a href="/" class="btn">en savoir plus</a>
-				</div>
+				<img src="assets/images/img_gallerie06.jpg">
+				<img src="assets/images/img_gallerie07.jpg">
+				<img src="assets/images/img_gallerie08.jpg">
+				<img src="assets/images/img_gallerie09.jpg">
+				<img src="assets/images/img_gallerie10.jpg">
 			</div>
-		</div>	
-	</div>
-
-	<div class="rechercher">
-		<div class="row">
-			<div class="col-12 text-center">
-				<h3>trouver un responsable du concours pour s'informer</h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 text-center">
-				<form action="/recherche" method="post">
-					<input type="text" name="name" id="name" placeholder="nom"> 
-					<p>ou</p>
-					<input type="number" name="departement" id="departement" placeholder="departement">
-					<input type="submit" class="btn" value="lancer la recherche">
-				</form>
-			</div>
+			<button><a href="./" class="uppercase">Découvrir la gallerie</a></button>
 		</div>
 	</div>
-
-	<div class="en-images">
-		<div class="row">
-			<div class="col-12 text-center">
-				<h2>Le concours en image</h2>
+	<div class="background">
+		<div class="banner">
+		</div>
+		<div class="bg-actu">
+			<div class="row col-8 offset-2">
+				{% for actu in news %}
+					{% if loop.index0 == 0 %}
+						<div class="col-4">
+					{% else %}
+						<div class="col-4 offset-2">
+					{% endif %}
+						<img src="{{actu.img}}">
+					</div>
+				{% endfor %}
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-12 text-center ls31">
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:250px; display:inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-			</div>
+		<div class="bg-participer">
 		</div>
-		<div class="row">
-			<div class="col-12 text-center">
-				<a href="/media" class="btn">découvrir la galerie</a>
-			</div>
+		<div class="bg-responsable">
+		</div>
+		<div class="bg-concours-img">
 		</div>
 	</div>
-
-	<div class="partenaire">
-		<div class="row">
-			<div class="col-12 text-center">
-				<h3>Nos partenaires</h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 text-center ls31">
-				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-				<div style="width:150px; height : 150px; display: inline-block;"><img src="assets/images/maxresdefault.jpg" alt=""></div>
-			</div>
-		</div>
-	</div>
-
-	<footer>
-		<div class="row text-center">
-			<div class="offset-3 col-2">
-				<p>mentions légales</p>
-			</div>
-			<div class="col-2">
-				<p>plan du site</p>
-			</div>
-			<div class="col-2">
-				<p>contact</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12 text-center">
-				<p>Concours MAF 1985 - 2017</p>
-			</div>
-		</div>
-	</footer>
 {% endblock %}

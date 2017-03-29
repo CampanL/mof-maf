@@ -78,6 +78,12 @@
 
 	/************Root Front Office***************/
 	$app->get('/','front.controller:index');
+	$app->get('/inscription', function()use($app){
+		return $app["twig"]->render("fronts/inscription.twig");
+	});
+	$app->get('/register', function()use($app){
+		return $app["twig"]->render("fronts/register.twig");
+	});
 
 	//Root Candidat
 	$app->get('/candidate/create','candidate.controller:create');
