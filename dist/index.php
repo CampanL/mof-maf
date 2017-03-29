@@ -62,6 +62,12 @@
 
 	//Root
 	$app->get('/','front.controller:index');
+	$app->get('/inscription', function()use($app){
+		return $app["twig"]->render("fronts/inscription.twig");
+	});
+	$app->get('/register', function()use($app){
+		return $app["twig"]->render("fronts/register.twig");
+	});
 
 	//Root Back Office
 	$app->get('/admin','adminFront.controller:connectForm');
