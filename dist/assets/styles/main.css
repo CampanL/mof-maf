@@ -141,15 +141,12 @@ button:hover
 	width: 100%;
 	border:none;
 	padding: 10px 15px;
+	color: #c81d25;
+	text-decoration: none;
 }
 .inscription-btn img
 {
 	margin-right: 30px;
-}
-.inscription-btn a
-{
-	color: #c81d25;
-	text-decoration: none;
 }
 .banner
 {
@@ -172,6 +169,7 @@ button:hover
 	background-color: #fbfbfb;
 	padding: 20px 30px;
 }
+
 .bg-actu
 {
 	background-image: url(../images/img_medaille.png);
@@ -194,7 +192,7 @@ button:hover
 	background-color: #35315d;
 	margin-bottom: 20px;
 }
-.button
+.news button
 {
 	border-radius: 5px;
 	background-color: #35315d;
@@ -204,15 +202,18 @@ button:hover
 	height: 20%;
 	position: relative;
 	top: 40px;
-	left: 40px;
 	border: solid 2px #35315d;
-}
-.button a
-{
-
 	color: #fbfbfb;
 	text-decoration: none;
 }
+.news button:hover
+{
+	background-color: #fbfbfb;
+	border: 2px solid #35315d;
+	color:#35315d;
+	text-decoration: none;
+}
+
 
 .voir-actu, .savoir-plus
 {
@@ -221,25 +222,16 @@ button:hover
 	margin-left: 35%;
 	padding: 15px;
 	font-weight: bold;
-}
-.savoir-plus
-{
-	background-color: #fbfbfb
-
-}
-.voir-actu
-{
-	background-color: #fff;
-}
-.voir-actu a
-{
+	background-color: #fbfbfb;
+	border: 2px solid rgba(0,0,0,0);
 	color: #35315b;
 	text-decoration: none;
 }
-.savoir-plus a
+.voir-actu:hover, .savoir-plus:hover
 {
-	color: #35315d;
-	text-decoration: none;
+	background-color: #35315d;
+	color: #fbfbfb;
+	border-color:#fbfbfb;
 }
 .participer
 {
@@ -284,9 +276,14 @@ button:hover
 	border-radius: 5px;
 	background-color: #c81d25;
 	border-style: none;
-	border-color: #c81d25;
+	border: 2px solid #c81d25;
 	font-weight: bold;
 	color: #fbfbfb;
+}
+.responsable button:hover
+{
+	background-color: #f3f3f3;
+	color: #c81d25;
 }
 .bg-responsable
 {
@@ -319,14 +316,16 @@ button:hover
 	border-style: none;
 	padding: 15px 30px;
 	background-color: #fff;
-}
-.concours-img a
-{
+	border: 2px solid #35315d;
 	color: #35315d;
 	font-weight: bold;
 	text-decoration: none;
 }
-
+.concours-img button:hover
+{
+	background-color: #35315d;
+	color: #fbfbfb;
+}
 .partenair
 {
 	margin-top: 3%;
@@ -460,15 +459,16 @@ button:hover
 	margin-top: 50px;
 	font-size: 1.3em;
 	color: #35315d;
-	height: 50px;
-	padding-top: 10px;
+	padding: 10px 0px;
+	border:2px solid #f3f3f3;
 	border-radius: 5px;
 	font-weight: bold;
 	background-color: #f3f3f3;
 }
 .dl-button:hover
 {
-	color: #35315d;
+	color: #fbfbfb;
+	background-color: #35315d;
 	text-decoration: none;
 }
 .steps
@@ -549,13 +549,15 @@ button:hover
 	padding: 20px 15px;
 	border-radius: 5px;
 	font-weight: bold;
+	border:2px solid #c81d25;
 	background-color: #c81d25;
 	color: #f3f3f3;
 }
 .palmares-button:hover
 {
+	background-color: #fbfbfb;
 	text-decoration: none;
-	color: #f3f3f3;
+	color: #c81d25;
 }
 .bienvenue
 {
@@ -594,10 +596,20 @@ button:hover
 	background-color: rgba(0,0,0,0);
 	margin:0% 3% 5% 28%;
 }
+.back:hover
+{
+	color: #fbfbfb;
+	background-color: #35315d;
+}
 .start
 {
 	background-color: #35315d;
 	color: #f3f3f3;	
+}
+.start:hover
+{
+	background-color: rgba(0,0,0,0);
+	color: #35315d;
 }
 .bg-formulaire
 {
@@ -673,18 +685,31 @@ button:hover
 	background-color: rgba(0,0,0,0);
 	border: 2px solid #35315d;
 	border-radius: 10px;
-	padding: 8px 15px;
+	padding: 10px 15px;
 	margin-left: 60%;
 	margin-right: 3%;
+	color: #35315d;
+	font-weight: bold;
+}
+.cancel:hover
+{
+	background-color: #35315d;
+	color: #fbfbfb;
 }
 .continue
 {
+	border: 2px solid #35315d;
 	padding: 10px 15px;
 	border-radius: 10px;
 	background-color: #35315d;
 	font-weight: bold;
 	color: #f3f3f3;
-	border: none;
+}
+.continue:hover
+{
+	border-color: #35315d;
+	background-color: #f3f3f3;
+	color: #35315d;
 }
 .precedent .continue
 {
@@ -713,6 +738,11 @@ button:hover
 	color: #f3f3f3;
 	border: none;
 	border: 2px solid #35315d;
+}
+.finished button:hover
+{
+	background-color: #fbfbfb;
+	color: #35315d;
 }
 footer{
 	background-color: #34315c;
