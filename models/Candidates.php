@@ -31,5 +31,15 @@ class Candidates extends Models
 		return $data;
 	}
 
+	public function count(){
+		$prepare = $this->app['pdo']->prepare('SELECT COUNT(*) as number from '.$this->table);
+
+ 		$prepare->execute();
+
+		$data = $prepare->fetchAll();
+
+		return $data;
+	}
+
 }
 

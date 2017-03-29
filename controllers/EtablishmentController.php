@@ -21,9 +21,8 @@ class EtablishmentController extends Controllers{
 		
 		$session['etablishment'] = $data;
 
-		$session['step'] = 3;
-
 		$this->app['session']->set('registration',$session);
+		$this->app['session']->set('step',3);
 
 		return $this->app->redirect('/candidate/create');
 	}

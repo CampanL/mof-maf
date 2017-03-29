@@ -21,10 +21,9 @@ class ContractsController extends Controllers{
 	
 		$session['contract'] = $data;
 
-		$session['step'] = 4;
-
 		$this->app['session']->set('registration',$session);
+		$this->app['session']->set('step',4);
 
-		return $this->app->redirect('/candidate/save');
+		return $this->app->redirect('/candidate/create');
 	}
 }

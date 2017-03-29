@@ -83,12 +83,14 @@
 	});
 	$app->get('/register', function()use($app){
 		return $app["twig"]->render("fronts/register.twig");
-	});
-
+	});	
+	
 	//Root Candidat
 	$app->get('/candidate/create','candidate.controller:create');
 	$app->post('/candidate/create','candidate.controller:toSession');
-	$app->get('/candidate/save','candidate.controller:save');
+	$app->post('/candidate/save','candidate.controller:save');
+	$app->get('/candidate/start','candidate.controller:start');
+
 	$app->post('/etashbliment/create','etashbliment.controller:toSession');
 	$app->post('/contract/create','contracts.controller:toSession');
 

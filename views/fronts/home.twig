@@ -13,7 +13,7 @@
 					<div class="col-4">
 						<img src="assets/images/ico_candidats.png">
 						<p>
-							<span>+6000</span><br/>
+							<span>{{nbCandidats}}</span><br/>
 							candidats
 						</p>
 					</div>
@@ -126,11 +126,10 @@
 			<div class="row col-8 offset-2">
 				{% for actu in news %}
 					{% if loop.index0 == 0 %}
-						<div class="col-4">
+						<div class="col-4" style="background-image:url('{{actu.img}}')">
 					{% else %}
-						<div class="col-4 offset-2">
+						<div class="col-4 offset-2 " style="background-image:url('{{actu.img}}')">
 					{% endif %}
-						<img src="{{actu.img}}">
 					</div>
 				{% endfor %}
 			</div>
