@@ -108,9 +108,12 @@ class CandidateController extends Controllers{
 		//Suppression  etablissement
 		$etablishments->delete($candidate->id_etablishment);
 
+
 		//Suppression candidat
 		
 		$this->model->delete($id);
+
+
 
 
 		$this->app['session']->getFlashBag()->add('alert', 'Utilisateur supprimé');
