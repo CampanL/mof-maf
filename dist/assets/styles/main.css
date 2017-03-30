@@ -4,8 +4,12 @@
 }
 body{
 	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
 }
-
+h1,h2,h3,h4,h5
+{
+	font-family: 'Raleway', sans-serif;
+}
 header{
 	background-image: url(../images/bck_hearder.jpg);
 	background-repeat: no-repeat;
@@ -61,7 +65,7 @@ button:hover
 }
 
 .nav li{
-	padding: 15px 3.5rem;
+	padding: 15px 3vw;
 	font-size: .75em;
 	text-transform: uppercase;
 }
@@ -86,7 +90,7 @@ button:hover
 }
 .reseau-sociaux img
 {
-	margin-left:1rem;
+	margin-left:1vw;
 }
 .reseau-sociaux
 {
@@ -138,6 +142,7 @@ button:hover
 .inscription-btn button
 {
 	text-align: left;
+	background-color: #fbfbfb;
 	width: 100%;
 	border:none;
 	padding: 10px 15px;
@@ -146,11 +151,11 @@ button:hover
 }
 .inscription-btn img
 {
-	margin-right: 30px;
+	margin-right: 5%;
 }
 .banner
 {
-	background-image: url(../images/maxresdefault.jpg);
+	background-image: url(../images/MAF_HOME.jpg);
 	background-size: cover;
 	height: 800px;
 }
@@ -178,12 +183,14 @@ button:hover
 	padding-top: 25%;
 	padding-bottom: 10%;
 	background-color: #f3f3f3;
+	height: 900px;
 }
 .bg-actu .col-4
 {
   background: no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  height: 361px;
 }
 .blue-bar
 {
@@ -334,7 +341,7 @@ button:hover
 
 .inscription-banner
 {
-	background-image: url(../images/maxresdefault.jpg);
+	background-image: url(../images/MAF_INSCRIPTION.jpg);
 	background-size: cover;
 	height: 800px;
 }
